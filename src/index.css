@@ -1,0 +1,126 @@
+
+/* ---------------Products--------------- */
+.products{
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin: 15px 0;
+}
+.products .card{
+  max-width: 370px;
+  width: 100%;
+  overflow: hidden;
+  height: 570px;
+  box-shadow: 0 0 5px #ccc;
+  padding: 15px;
+  margin: 15px;
+  cursor: pointer;
+}
+.card img{
+  width: 100%;
+  height: 100%;
+  max-height: 340px;
+  display: block;
+  object-fit: cover;
+}
+.card .box{
+  margin: 15px 0;
+}
+.card .box h3{
+  text-transform: uppercase;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.card .box p{
+  margin: 10px 0;
+  line-height: 1.5;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+  height: 70px;
+}
+.card .box h4{
+  color: crimson;
+}
+.card .box button{
+  width: 100%;
+  border: none;
+  outline: none;
+  background: #000;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+  margin: 10px 0;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.box-details{
+  max-width: 500px;
+  width: 100%;
+  margin: 20px;
+}
+.box-details h2{
+  text-transform: uppercase;
+  color: darkblue;
+  letter-spacing: 2px;
+  font-size: 2rem;
+}
+.box-details button,
+.box-details .cart{
+  border: 1px solid #000;
+  outline: none;
+  background: #000;
+  cursor: pointer;
+  color: white;
+  margin-right: 5px;
+  margin-top: 10px;
+}
+.colors button,
+.sizes button{
+  width: 6em;
+  height: 35px;
+}
+.box-details p{
+  line-height: 1.5;
+  margin: 10px 0;
+  opacity: 0.8;
+}
+.box-details h3{
+  color: crimson;
+}
+.box-details .thumb{
+  display: flex;
+  cursor: pointer;
+}
+.box-details .thumb img{
+  width: 50px;
+  height: 45px;
+  display: block;
+  object-fit: cover;
+  margin: 20px;
+  overflow: hidden;
+}
+.box-details .cart-box{
+  padding: 10px 25px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  display: inline-block;
+}
+
+@media (max-width: 500px){
+  .buy{
+    padding: 0;
+  }
+  .box-details .thumb img{
+    width: 40px;
+    height: 35px;
+  }
+  .buy .img-container{
+    height: 350px;
+  }
+}

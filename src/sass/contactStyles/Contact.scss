@@ -1,0 +1,37 @@
+@import "/src/sass/configStyles/config";
+
+.contact {
+  padding: $p-md $p-sm;
+
+  & > form {
+    gap: 1em;
+    width: 100%;
+    max-width: 40em;
+    @include flex(center, center, center, column);
+
+    input,
+    textarea {
+      width: 100%;
+      resize: none;
+      outline: none;
+      padding: 0.7em;
+      border-radius: 0;
+      border: 0.125em solid #A0A0A0;
+
+      &::placeholder {
+        color: $black;
+      }
+      &:focus {
+        border: 0.2em solid $black;
+      }
+    }
+
+    & > div {
+      width: 100%;
+      @include flex(center, flex-end, center, column);
+      button {
+        @include button;
+      }
+    }
+  }
+}

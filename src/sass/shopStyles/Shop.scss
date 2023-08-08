@@ -1,0 +1,81 @@
+@import "/src/sass/configStyles/config";
+
+
+
+.shop {
+  
+  &__clothes {
+    padding: $p-sm $p-md;
+
+    &-heading {
+      font-size: $h2;
+      padding: $p-sm 0 $p-md;
+    }
+
+    &-container {
+      gap: 3em;
+      display: grid;
+      grid-template-columns: 1fr;
+    }
+
+    &-details {
+      width: 100%;
+      padding: 1.5em 0;
+    }
+
+    &-text {
+      @include flex(center, center, space-between, row);
+    }
+
+    &-title {
+      font-size: $h6;
+    }
+
+    &-price {
+      font-size: $h5;
+    }
+
+    &-rating {
+      margin: 1em 0;
+      @include flex(center, center, space-between, row);
+    }
+
+    &-buttons {
+      gap: 2em;
+      @include flex(center, center, start, row);
+
+      &-buy {
+        width: 10rem;
+        @include button;
+        border: 3px solid $black;
+      }
+
+      &-add {
+        @include button;
+
+        color: $black;
+        width: 10rem;
+        border: 2px solid $black;
+        background-color: $white;
+
+        &:hover {
+          color: $white;
+          border: 2px solid $black;
+          background-color: $black;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 45em) {
+  .shop {
+    &__clothes {
+      &-container {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+  }
+}
+
+

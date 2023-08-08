@@ -1,0 +1,77 @@
+@import "/src/sass/configStyles/config";
+
+.cart {
+  padding: $p-sm;
+}
+
+.cart-icon {
+  position: relative;
+  margin-right: 15px;
+
+  & > span {
+    top: -10px;
+    z-index: 10;
+    width: 20px;
+    right: -10px;
+    padding: 5px;
+    height: 20px;
+    display: flex;
+    color: white;
+    font-size: 13px;
+    position: absolute;
+    border-radius: 20px;
+    align-items: center;
+    background: crimson;
+    justify-content: center;
+  }
+}
+
+.cart-empty {
+  height: 100vh;
+  @include flex(center, center, center, column);
+}
+
+
+
+/* ****** Cart ********************** */
+.cart-{
+    position: relative;
+    border: 1px solid #ccc;
+    transform: scaleY(0.98)
+  }
+  .amount span{
+    color: crimson;
+    padding: 0 20px;
+  }
+  .amount .count{
+    width: 40px;
+    height: 30px;
+    border: 1px solid #555;
+    outline: none;
+    background: #555;
+    cursor: pointer;
+  }
+  .delete{
+    position: absolute;
+    top:0;
+    right: 5px;
+    color: crimson;
+    cursor: pointer;
+    font-weight: 900;
+  }
+  .total{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .total a{
+    background: #333;
+    color: white;
+    padding: 10px 25px
+  }
+  .total h3{
+    margin-right: 50px;
+    color: crimson;
+  }

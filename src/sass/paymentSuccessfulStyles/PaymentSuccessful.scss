@@ -1,0 +1,21 @@
+@import "/src/sass/configStyles/config";
+
+.payment-successful {
+  padding: 7em $p-md $p-sm;
+
+  & > div {
+    gap: 3em;
+    padding: 7em;
+    border: 2px solid $black;
+    @include flex(center, center, center, column);
+
+    & > h1 {
+        font-size: $h2;
+    }
+
+    & > button {
+        width: 12em;
+        @include button;
+    }
+  }
+}

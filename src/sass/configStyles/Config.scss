@@ -1,0 +1,256 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+// reset everything
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0 solid transparent;
+  font-family: "Poppins", sans-serif;
+}
+
+// prevent iOS font size change
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+// reset body line-height
+body {
+  line-height: 1;
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+}
+
+body::-webkit-scrollbar {
+  width: 0.6em;
+}
+
+body::-webkit-scrollbar-track {
+  background-color: #e0e0e0;
+}
+
+body::-webkit-scrollbar-thumb {
+  border-radius: 5em;
+  background-color: #bebebe;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+  background-color: #aaaaaa;
+}
+
+// all media elements set to block and full width
+img,
+svg,
+video {
+  display: block;
+  max-width: 100%;
+  object-fit: cover;
+}
+
+// inherit fonts for inputs and buttons
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  line-height: inherit;
+  color: inherit;
+}
+
+// collapse table
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+// assign button hover state
+button,
+[role="button"] {
+  cursor: pointer;
+  background-color: transparent;
+  -webkit-tap-highlight-color: transparent;
+  &:focus {
+    outline: 0;
+  }
+}
+
+// reset anchor style
+a {
+  cursor: pointer;
+  color: inherit;
+  text-decoration: inherit;
+  -webkit-tap-highlight-color: transparent;
+}
+
+// reset heading style
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+// reset list style
+ol,
+ul {
+  list-style: none;
+}
+
+// reset firefox placeholder opacity
+::-moz-placeholder {
+  opacity: 1;
+}
+
+// reset textarea style
+textarea {
+  // move the label to the top
+  vertical-align: top;
+
+  // turn off scroll bars in IE unless needed
+  overflow: auto;
+}
+
+// reset checkbox and radio style
+[type="checkbox"],
+[type="radio"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  &:focus {
+    outline: 0;
+  }
+}
+
+// PRIMARY COLORS
+$white: #fff;
+$black: #000;
+$lightdark: rgba(217, 217, 217, 0.46);
+
+// FONT FAMILY
+$poppins: "Poppins", sans-serif;
+
+// PADDINGS
+$p-sm: 3%;
+$p-md: 5%;
+$p-lg: 7%;
+$p-xl: 10%;
+$p-xxl: 15%;
+
+// HEADINGS
+$h1: calc(4rem + ((1vw - 1rem) * 0.5));
+$h2: calc(2.5rem + ((1vw - 1rem) * 0.5));
+$h3: calc(2.1rem + ((1vw - 1rem) * 0.5));
+$h4: calc(1.8rem + ((1vw - 1rem) * 0.5));
+$h5: calc(1.5rem + ((1vw - 1rem) * 0.5));
+$h6: calc(1.1rem + ((1vw - 1rem) * 0.5));
+
+@mixin transition {
+  transition: all 500ms ease;
+}
+
+@mixin flex($text, $items, $justify, $direction) {
+  display: flex;
+  text-align: $text;
+  align-items: $items;
+  justify-content: $justify;
+  flex-direction: $direction;
+}
+
+@mixin button {
+  border: none;
+  outline: none;
+  color: $white;
+  cursor: pointer;
+  font-weight: 400;
+  background: $black;
+  padding: 1rem 1.5rem;
+  font-family: $poppins;
+
+  &:hover {
+    color: $black;
+    border: 2px solid $black;
+    background-color: $white;
+  }
+
+  @include transition;
+  @include flex(center, center, center, unset);
+}
+
+nav,
+main,
+footer {
+  width: 100%;
+  @include flex(center, center, center, column);
+}
+
+button {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background: none;
+  text-decoration: none;
+  list-style-type: none;
+}
+
+.scroll-to-top {
+  width: unset !important;
+  height: unset !important;
+  @include flex(center, center, center, column);
+  box-shadow: 0 0 1.25em rgba(180, 180, 180, 0.75) !important;
+}
+
+.Btn {
+  width: 40px;
+  height: 40px;
+  color: $white;
+  cursor: pointer;
+  position: relative;
+  border-radius: 1em;
+  @include flex(center, center, center, row);
+}
+
+.arrow path {
+  fill: $black;
+}
+
+.text {
+  gap: 0.7em;
+  opacity: 0;
+  width: 100px;
+  bottom: -18px;
+  color: grey;
+  font-size: 0.7rem;
+  position: absolute;
+  transition-duration: 0.7s;
+  @include flex(center, center, center, row);
+}
+
+.Btn:hover .text {
+  opacity: 1;
+  transition-duration: 0.7s;
+}
+
+.arrow {
+  animation: slide-in-bottom 5s ease infinite running;
+}
+
+@keyframes slide-in-bottom {
+  0% {
+    transform: translateY(0.7em);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

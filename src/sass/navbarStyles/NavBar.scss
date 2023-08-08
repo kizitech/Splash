@@ -1,0 +1,249 @@
+@import "/src/sass/configStyles/config";
+
+.navbar {
+  width: 100%;
+  height: 80px;
+  color: $white;
+  display: flex;
+  padding: 0 $p-md;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar-dark {
+  width: 100%;
+  height: 80px;
+  color: $black;
+  display: flex;
+  padding: 0 $p-md;
+  align-items: center;
+  justify-content: space-between;
+
+  .nav-icons {
+    img {
+      filter: invert(1);
+    }
+  }
+}
+
+.light-navbar .headroom--pinned {
+  background: #000000;
+}
+
+.dark-navbar .headroom--pinned {
+  background: #f5f5f5;
+  border-bottom: 0.125em solid $black;
+}
+
+@supports (backdrop-filter: blur()) {
+  .light-navbar .headroom--pinned {
+    background: #00000057;
+    backdrop-filter: blur(0.8em);
+    -moz-backdrop-filter: blur(0.8em);
+    -webkit-backdrop-filter: blur(0.8em);
+    border-bottom: 0.2em solid #0000009e;
+  }
+
+  .dark-navbar .headroom--pinned {
+    background: #f5f5f573;
+    backdrop-filter: blur(1em);
+    -moz-backdrop-filter: blur(0.8em);
+    -webkit-backdrop-filter: blur(0.8em);
+    border-bottom: 0.125em solid $black;
+  }
+}
+
+.nav-menu {
+  gap: 0.7em;
+  height: 100%;
+  @include flex(center, center, center, row);
+
+  a.active {
+    padding: 1em;
+    color: $white;
+    background: black;
+    border-radius: 3em;
+  }
+
+  a:hover {
+    font-weight: 600;
+  }
+}
+
+li {
+  padding: 0 1rem;
+}
+
+.hamburger {
+  display: none;
+}
+
+.mobile-menu {
+  display: none;
+}
+
+.nav-icons {
+  gap: 3em;
+  display: flex;
+  @include flex(center, center, center, row);
+
+  & > form {
+    position: relative;
+    @include flex(center, center, center, row);
+  }
+
+  img {
+    height: 1.2rem;
+  }
+}
+
+.search {
+  &-input {
+    @include transition;
+
+    width: 0em;
+    border: none;
+    outline: none;
+    padding: 0.7em;
+    font-size: 0.8rem;
+    margin-right: 0.5em;
+    border-radius: 1.5em;
+    letter-spacing: 0.04rem;
+    background: transparent;
+
+    &:focus,
+    &:hover {
+      width: 12em;
+      background: rgba(0, 0, 0, 0.3);
+    }
+  }
+
+  &-icon {
+    cursor: pointer;
+  }
+}
+
+.cart-icon {
+  cursor: pointer;
+}
+
+@media screen and (max-width: 940px) {
+  .navbar {
+    padding: 0 $p-sm;
+  }
+
+  .mobile-menu {
+    left: 0;
+    width: 100%;
+    height: 90vh;
+    top: -200vh;
+    color: $black;
+    transition: 0.3s;
+    position: absolute;
+    background-color: #f5f5f5;
+
+    @include flex(unset, unset, space-around, column);
+  }
+
+  .navbar-bg {
+    background-color: #f5f5f5;
+  }
+
+  .navbar-dark-bg {
+    background-color: #f5f5f5;
+  }
+
+  .active {
+    top: 10vh;
+  }
+
+  .mobile-menu li {
+    @include transition;
+
+    margin: 1em;
+    padding: 1.2rem 1rem;
+    border-bottom: 1px solid #ccc;
+
+    &:hover {
+      border-bottom: 1px solid #333;
+    }
+  }
+
+  .mobile-nav {
+    margin: 1rem 0;
+  }
+
+  .mobile-nav a.active li {
+    font-weight: 500;
+    border-bottom: 0.1em solid $black;
+  }
+
+  .mobile-menu-bottom {
+    width: 100%;
+    padding: 1rem 0;
+    text-align: center;
+  }
+
+  .menu-icons {
+    gap: 0.2em;
+    height: 5em;
+    padding: $p-sm;
+    overflow: hidden;
+    @include flex(center, center, space-between, row);
+
+    a,
+    div[role="input"] {
+      height: 100%;
+      @include button;
+    }
+
+    a:hover img {
+      filter: invert(1);
+    }
+
+    div[role="input"] {
+      width: 100%;
+      padding: 0.8rem 0.5rem;
+    }
+
+    input {
+      width: 100%;
+      border: none;
+      outline: none;
+      background: transparent;
+
+      &::placeholder {
+        color: white;
+        @include flex(center, center, center, column);
+      }
+    }
+  }
+
+  .social-icons {
+    display: flex;
+    justify-content: space-around;
+    margin: 2rem 0;
+  }
+
+  .social-icons .icon:hover {
+    transform: scale(1.5);
+    transition: 0.3s;
+  }
+
+  .nav-menu {
+    display: none;
+  }
+
+  .nav-icons {
+    display: none;
+  }
+  .hamburger {
+    display: block;
+  }
+}
+
+@media screen and (min-width: 40em) {
+  .menu-icons {
+    height: 6em;
+  }
+}
