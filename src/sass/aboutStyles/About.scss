@@ -1,0 +1,84 @@
+@import "/src/sass/configStyles/config";
+
+.about {
+  &__title {
+    font-size: $h2;
+    margin: $p-sm 0;
+  }
+
+  &__section {
+    gap: 3em;
+    position: relative;
+    @include flex(left, unset, unset, column);
+  }
+
+  &__info {
+    @include flex(left, unset, unset, column);
+  }
+
+  &__text {
+    width: 30em;
+    font-weight: 400;
+    line-height: 2rem;
+  }
+
+  &__team {
+    width: 100%;
+    margin-top: 5em;
+
+    &-title {
+      font-size: $h2;
+      margin: $p-sm 0;
+      font-weight: 600;
+    }
+
+    &-workers {
+      @include flex(center, center, center, unset);
+
+      gap: 2em;
+      width: 100%;
+      display: grid;
+      padding: 5em $p-md;
+      background: #fafafa;
+      grid-template-columns: 1fr 1fr;
+    }
+
+    &-member {
+      @include flex(center, center, center, column);
+    }
+
+    &-image {
+      cursor: pointer;
+      transition: all 500ms;
+
+      &:hover {
+        transform: scale(1.05);
+      }
+    }
+
+    &-name {
+      font-weight: 600;
+      margin: 0.4em 0 0;
+    }
+
+    &-skill {
+      cursor: pointer;
+      font-weight: 300;
+      margin: 0.6em 0 0;
+      font-size: 0.8235rem;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+@media (min-width: 40em) {
+  .about {
+    &__team-workers {
+        gap: 4em;
+      grid-template-columns: repeat(3, 18em);
+    }
+  }
+}

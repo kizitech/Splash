@@ -14,25 +14,30 @@ function About() {
           <div className="about__info">
             <img src={sketch} alt="clothes sketches" className="about__image" />
             <p className="about__text">
-              We give the most sophisticating and most beautiful look to our
-              women. Our outfits are traditionally made, ranging from winter,
-              summer, casual, and outing wears.
+              <strong>
+                We give the most sophisticating and most beautiful look to our
+                women
+              </strong>
+              . Our outfits are traditionally made, ranging from winter, summer,
+              casual, and outing wears.
             </p>
           </div>
           <div className="about__info">
             <img src={founder} alt="founder" className="about__image" />
             <p className="about__text">
               Splash is a rising brand which came into the limelight in 2020
-              when Tina was awarded the best-dressed in the fashion women award
-              in 2020. We also have other prizes that weren't global awards. Our
-              founder Harris Ben, an American, started his tailoring journey in
-              Alaska in the year 2005.
+              when <strong>Tina was awarded the best-dressed</strong> in the
+              fashion women award in 2020. We also have other prizes that
+              weren't <strong>global awards</strong>. Our founder{" "}
+              <strong>Harris Ben</strong>, an American, started his tailoring
+              journey in
+              <strong>Alaska in the year 2005</strong>.
             </p>
           </div>
         </section>
-        <section className="about__section">
+        <section className="about__team">
           <h1 className="about__team-title">Meet the Team</h1>
-          <div className="about__team">
+          <div className="about__team-workers">
             {splashTeam.map((team) => (
               <div key={team.id} className="about__team-member">
                 <img
