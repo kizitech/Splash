@@ -12,7 +12,7 @@ function About() {
         <h1 className="about__title">About Us</h1>
         <section className="about__section">
           <div className="about__info">
-            <img src={sketch} alt="clothes sketches" className="about__image" />
+            <img src={sketch} title="Some Team Work" alt="clothes sketches" className="about__image" />
             <p className="about__text">
               <strong>
                 We give the most sophisticating and most beautiful look to our
@@ -22,8 +22,8 @@ function About() {
               casual, and outing wears.
             </p>
           </div>
-          <div className="about__info">
-            <img src={founder} alt="founder" className="about__image" />
+          <div className="about__info about__info-reverse">
+            <img src={founder} alt="founder" title="Founder" className="about__image about__image-reverse" />
             <p className="about__text">
               Splash is a rising brand which came into the limelight in 2020
               when <strong>Tina was awarded the best-dressed</strong> in the

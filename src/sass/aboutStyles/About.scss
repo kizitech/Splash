@@ -9,21 +9,31 @@
   &__section {
     gap: 3em;
     position: relative;
-    @include flex(left, unset, unset, column);
+    padding: $p-sm $p-md 0;
+    @include flex(left, center, unset, column);
   }
 
   &__info {
-    @include flex(left, unset, unset, column);
+    width: 100%;
+    @include flex(left, flex-start, unset, column);
+  }
+
+  &__image {
+    width: 100%;
+    max-width: 30em;
   }
 
   &__text {
-    width: 30em;
+    width: 27em;
+    max-width: 100%;
     font-weight: 400;
+    margin-top: $p-sm;
     line-height: 2rem;
   }
 
   &__team {
     width: 100%;
+    padding: $p-sm $p-md 0;
     margin-top: 5em;
 
     &-title {
@@ -36,9 +46,8 @@
       @include flex(center, center, center, unset);
 
       gap: 2em;
-      width: 100%;
       display: grid;
-      padding: 5em $p-md;
+      padding: $p-md;
       background: #fafafa;
       grid-template-columns: 1fr 1fr;
     }
@@ -76,9 +85,40 @@
 
 @media (min-width: 40em) {
   .about {
+    &__info {
+      gap: $p-sm;
+      flex-direction: row;
+    }
+
+    &__info-reverse {
+      flex-direction: row-reverse;
+    }
+  }
+}
+
+@media (min-width: 60em) {
+  .about {
     &__team-workers {
-        gap: 4em;
-      grid-template-columns: repeat(3, 18em);
+      gap: 0em;
+      grid-template-columns: repeat(3, 16em);
+    }
+  }
+}
+
+@media (min-width: 70em) {
+  .about {
+    &__team-workers {
+      gap: 4em;
+      grid-template-columns: repeat(3, 22em);
+    }
+
+    &__image {
+      max-width: 34em;
+    }
+
+    &__image-reverse {
+      max-width: 44em;
+      margin-top: -9em;
     }
   }
 }
