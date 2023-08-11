@@ -23,7 +23,7 @@ function App() {
             <Route path="/shop/payment" element={<Payment />} />
             <Route path="/shop/shipping" element={<Shipping />} />
             <Route path="/shop/products/:id" element={<Buy />} />
-            <Route path="/information" element={<Information />} />
+            <Route path="/shop/information" element={<Information />} />
             <Route path="/shop/home-products/:id" element={<BuyHome />} />
             <Route path="/shop/account-details" element={<AccountDetails />} />
             <Route path="/shop/payment-successful" element={<PaymentSuccessful />} />

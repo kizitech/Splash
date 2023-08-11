@@ -1,21 +1,16 @@
-import NavBarDark from "src/components/NavBarDark";
-import { useNavigate } from "react-router-dom";
+import { NavBarDark, PaymentNavBar } from "src/components";
 
-
-const Shipping = () => {
-  const navigate = useNavigate();
-
+function Shipping() {
   return (
     <>
       <NavBarDark />
 
-      <div>
-        <button className="btn" onClick={() => navigate(-1)}>
-          Go Back
-        </button>
-      </div>
+      <main>
+        <PaymentNavBar />
+        <div>Shipping</div>
+      </main>
     </>
   );
-};
+}
 
 export default Shipping;

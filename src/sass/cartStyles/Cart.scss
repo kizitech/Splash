@@ -51,6 +51,9 @@
 
     & a {
       @include button;
+      @media screen and (min-width: 40em) {
+        width: 10em;
+      }
     }
 
     & button {

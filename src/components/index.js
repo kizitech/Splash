@@ -6,6 +6,7 @@ import BackToTop from "./BackToTop";
 import NavBarDark from "./NavBarDark";
 import StarRating from "./StarRating";
 import DataProvider from "./DataProvider";
+import PaymentNavBar from "./PaymentNavBar";
 import ProductThumbnails from "./ProductThumbnails";
 import ScrollRestoration from "./ScrollRestoration";
 
@@ -18,6 +19,7 @@ export {
   NavBarDark,
   StarRating,
   DataProvider,
+  PaymentNavBar,
   ProductThumbnails,
   ScrollRestoration,
 };

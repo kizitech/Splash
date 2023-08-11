@@ -1,11 +1,14 @@
-import NavBarDark from "src/components/NavBarDark";
+import { NavBarDark, PaymentNavBar } from "src/components";
 
 function Payment() {
   return (
     <>
       <NavBarDark />
 
-      <div>Payment</div>
+      <main>
+        <PaymentNavBar />
+        <div>Payment</div>
+      </main>
     </>
   );
 }

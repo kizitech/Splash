@@ -122,7 +122,7 @@ export default function Cart() {
                 <button type='submit' onClick={() => clearCart()}>Clear Cart <RiDeleteBin6Line /></button>
                 <button className="cart__summary-total">Total: $ {total}</button>
               </div>
-              <Link to="/shop/payment" className="cart__summary-link">Pay</Link>
+              <Link to="/shop/information" className="cart__summary-link">Pay</Link>
           </div> 
       </main>
     </>
