@@ -1,6 +1,6 @@
 import { NavBarDark, PaymentNavBar } from "src/components";
 
-function Shipping() {
+function Shipping () {
   return (
     <>
       <NavBarDark />

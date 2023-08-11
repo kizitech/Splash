@@ -1,0 +1,180 @@
+@import "/src/sass/configStyles/config";
+
+.information {
+  &__content {
+    gap: 5em;
+    width: 100%;
+    padding: $p-md;
+    @include flex(unset, center, center, column);
+  }
+
+  &__section {
+    gap: 2em;
+    @include flex(left, center, center, column);
+
+    &-title {
+      font-size: 1rem;
+    }
+
+    &-heading {
+      width: 100%;
+      font-size: $h4;
+    }
+  }
+
+  &__payment {
+    gap: 2em;
+    @include flex(unset, center, center, row);
+
+    &-paypal {
+      width: 10em;
+      padding: 0.5em;
+      background: #ffce0c;
+      @include flex(unset, center, center, row);
+
+      img {
+        width: 80%;
+        height: 1.6em;
+      }
+    }
+
+    &-paystack {
+      width: 10em;
+      padding: 0.5em;
+      background: $white;
+      box-shadow: (0px 4px 20px rgba(0, 0, 0, 0.25));
+      @include flex(unset, center, center, row);
+
+      img {
+        height: 1.5em;
+      }
+    }
+  }
+
+  &__divider {
+    gap: 1em;
+    margin: 0.5em;
+    @include flex(center, center, center, row);
+
+    &-line {
+      width: 12em;
+      height: 0.0625rem;
+      background: $black;
+    }
+  }
+
+  &__form {
+    gap: 1em;
+    @include flex(left, center, center, column);
+
+    input,
+    select {
+      width: 100%;
+      outline: none;
+      padding: 1em;
+      border-radius: 0;
+      border: 0.125em solid $black;
+
+      &::placeholder {
+        color: black;
+      }
+    }
+
+    &-name {
+      gap: 1em;
+      @include flex(center, center, center, row);
+    }
+  }
+
+  &__save-info {
+    gap: 0.5em;
+    width: 100%;
+    margin-top: 1em;
+    @include flex(left, center, flex-start, row);
+
+    &-checkbox {
+      cursor: pointer;
+
+      input {
+        display: none;
+      }
+
+      svg {
+        overflow: visible;
+      }
+
+      .path {
+        fill: none;
+        stroke: $black;
+        stroke-width: 6;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-dashoffset: 0;
+        stroke-dasharray: 241 9999999;
+        transition: stroke-dasharray 0.5s ease, stroke-dashoffset 0.5s ease;
+      }
+
+      input:checked ~ svg {
+        background: $black;
+      }
+
+      input:checked ~ svg .path {
+        stroke: $white;
+        background: $black;
+        stroke-dasharray: 70.5096664428711 9999999;
+        stroke-dashoffset: -262.2723388671875;
+      }
+    }
+  }
+
+  &__continue {
+    width: 100%;
+    margin-top: 1em;
+    @include flex(left, center, center, row);
+
+    &-link {
+      width: 100%;
+      @include button;
+    }
+  }
+}
+
+@media (min-width: 60em) {
+  .information {
+    &__divider-line {
+      width: 23em;
+    }
+
+    &__section-heading {
+      width: 170%;
+    }
+
+    &__form {
+      gap: 1.5em;
+      @include flex(left, center, center, column);
+
+      input,
+      select {
+        width: 170%;
+      }
+
+      &-name {
+        width: 170%;
+      }
+    }
+
+    &__save-info {
+      width: 170%;
+    }
+
+    &__continue {
+      width: 170%;
+      justify-content: flex-end;
+
+      &-link {
+        width: unset;
+        @include button;
+      }
+    }
+  }
+}
