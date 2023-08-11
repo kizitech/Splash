@@ -4,6 +4,8 @@ import { Sizes, Colors, NavBarDark, StarRating } from "src/components";
 
 import plus from "src/assets/icons/plus.svg";
 import minus from "src/assets/icons/minus.svg";
+
+import { RiDeleteBin6Line } from "react-icons/ri";
 import { VscChromeClose } from "react-icons/vsc";
 
 import React, { useContext, useState, useEffect } from "react";
@@ -52,6 +54,12 @@ export default function Cart() {
     }
   };
 
+    const clearCart = () => {
+      if (window.confirm("Do you want to empty your cart?")) {
+        setCart([]);
+      }
+    };
+
   if (cart.length === 0)
     return (
       <>
@@ -76,57 +84,46 @@ export default function Cart() {
               className="cart__product-image"
             />
 
-            <div className="cart__product-details">
-              <h2 className="cart__product-title" title={product.title}>
-                {product.title}
-              </h2>
-              <h3 className="cart__product-price">${product.price}</h3>
-              <Colors colors={product.colors} />
-              <Sizes sizes={product.sizes} />
-              <p className="cart__product-description">{product.description}</p>
+            <div className="buy__details-product-info">
+                <h2 className="buy__details-product-title" title={product.title}>{product.title}</h2>
+                <p className="buy__details-product-description">{product.description}</p>
 
-              <div className="cart__product-quantity">
-                <button
-                  onClick={() => reduction(product._id)}
-                  className="cart__product-quantity-btn"
-                >
-                  <img
-                    src={minus}
-                    alt="remove item to cart"
-                    className=" cart__product-quantity-btn--reduce"
-                  />
-                </button>
-                <span className="cart__product-quantity-count">
-                  {product.count}
-                </span>
-                <button
-                  onClick={() => increase(product._id)}
-                  className="cart__product-quantity-btn"
-                >
-                  <img
-                    src={plus}
-                    alt="add more item to cart"
-                    className="cart__product-quantity-btn--increase"
-                  />
-                </button>
-              </div>
+                <div className="buy__details-product-rating"><StarRating /></div>
+                <h2 className="buy__details-product-price"><strong>${product.price}</strong></h2>
 
-              <div
-                onClick={() => removeProduct(product._id)}
-                className="cart__product-remove"
-              >
-                <VscChromeClose />
+                <div className="buy__details-product-quantity">
+                  <h3 className="buy__details-product-quantity-title">Quantity</h3>
+                  <div className="quantity">
+                    <button onClick={() => reduction(product._id)}><img src={minus} alt="remove one from cart" /></button>
+                    <span>{product.count}</span>
+                    <button onClick={() => increase(product._id)}><img src={plus} alt="add one more to cart" /></button>
+                  </div>
+                </div>
+
+                <div className="buy__details-product-colors">
+                  <h3 className="buy__details-product-colors-title">Colors:</h3>
+                  <Colors colors={product.colors} />
+                </div>
+
+                <div className="buy__details-product-sizes">
+                  <h3 className="buy__details-product-sizes-title">Sizes:</h3>
+                  <Sizes sizes={product.sizes} />
+                </div>
+
+                <div onClick={() => removeProduct(product._id)} title="Remove item from cart" className="cart__product-remove" >
+                  <VscChromeClose />
+                </div>
               </div>
-            </div>
           </div>
         ))}
 
-        <div className="cart__summary">
-          <Link to="/payment" className="cart__summary-link">
-            Pay
-          </Link>
-          <h3 className="cart__summary-total">Total: $ {total}</h3>
-        </div>
+          <div className="cart__summary">
+              <div>
+                <button type='submit' onClick={() => clearCart()}>Clear Cart <RiDeleteBin6Line /></button>
+                <button className="cart__summary-total">Total: $ {total}</button>
+              </div>
+              <Link to="/shop/payment" className="cart__summary-link">Pay</Link>
+          </div> 
       </main>
     </>
   );

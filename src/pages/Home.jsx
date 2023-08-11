@@ -10,7 +10,7 @@ import { latestArrivals } from "../components/items/Home";
 const Home = () => {
   const value = useContext(DataContext)
   const [homeProducts] = value.homeProducts
-  const addCart = value.addCart
+  const addHomeCart = value.addHomeCart
 
   return (
     <>
@@ -51,7 +51,7 @@ const Home = () => {
               </div>
               <div className="home__top-collection-buttons">
                 <Link className="home__top-collection-buttons-buy"to={`/shop/home-products/${homeProduct._id}`}>Buy Now</Link>
-                <Link className="home__top-collection-buttons-add"  onClick={() => addCart(homeProduct._id)}><button type="button">Add to cart</button></Link>
+                <Link className="home__top-collection-buttons-add"  onClick={() => addHomeCart(homeProduct._id)}><button type="button">Add to cart</button></Link>
               </div>
             </div>
           </div>

@@ -2,23 +2,71 @@
 
 .cart {
   gap: 3em;
-  padding: $p-sm;
+  padding: $p-md;
 
   &__product {
     gap: 3em;
     width: 100%;
     padding: $p-md;
+    flex-wrap: wrap;
     position: relative;
     border: 1px solid #ccc;
-    @include flex(left, center, center, column);
+    @include flex(left, center, space-around, unset);
 
     &-image {
       height: 35em;
     }
 
     &-details {
-    @include flex(left, center, center, column);
+      @include flex(left, center, center, column);
+    }
 
+    &-remove {
+      top: 0;
+      right: 0;
+      width: 2em;
+      height: 2em;
+      font-size: $h4;
+      position: absolute;
+      background: $white;
+      border-left: 1px solid #ccc;
+      border-bottom: 1px solid #ccc;
+      @include flex(left, center, center, column);
+
+      &:hover {
+        border: none;
+        color: $white;
+        background-color: crimson;
+      }
+    }
+  }
+
+  &__summary {
+    width: 100%;
+    @include flex(center, center, space-between, row);
+
+    & > div {
+      @include flex(center, center, center, row);
+    }
+
+    & a {
+      @include button;
+    }
+
+    & button {
+      @include button;
+      @include flex(center, center, center, row);
+
+      gap: 1em;
+      color: $black;
+      background: $white;
+      border: 2px solid $black;
+
+      &:hover {
+        color: $white;
+        background: $black;
+        border: 2px solid $black;
+      }
     }
   }
 }

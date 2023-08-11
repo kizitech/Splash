@@ -15,8 +15,8 @@ import remove from "src/assets/icons/minus.svg";
 export default function Details() {
   const { id } = useParams();
   const value = useContext(DataContext);
-  const [homeProducts] = value.homeProducts;
-  const addCart = value.addCart;
+  const [homeProducts, setHomeProducts] = value.homeProducts;
+  const addHomeCart = value.addHomeCart;
 
   const [index, setIndex] = useState(0);
   const imgDiv = useRef();
@@ -31,6 +31,25 @@ export default function Details() {
     const y = ((e.pageY - top) / height) * 100;
     imgDiv.current.style.backgroundPosition = `${x}% ${y}%`;
   };
+
+  
+    const reduction = (id) => {
+      homeProducts.forEach((item) => {
+        if (item._id === id) {
+          item.count === 1 ? (item.count = 1) : (item.count -= 1);
+        }
+      });
+      setHomeProducts([...homeProducts]);
+    };
+
+    const increase = (id) => {
+      homeProducts.forEach((item) => {
+        if (item._id === id) {
+          item.count += 1;
+        }
+      });
+      setHomeProducts([...homeProducts]);
+    };
 
   return (
     <>
@@ -104,7 +123,7 @@ export default function Details() {
 
                 <div className="buy__details-product-buttons">
                   <button
-                    onClick={() => addCart(homeProduct._id)}
+                    onClick={() => addHomeCart(homeProduct._id)}
                     className="buy__details-add-to-cart-button"
                   >
                     Add to Cart

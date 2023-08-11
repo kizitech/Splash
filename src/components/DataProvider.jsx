@@ -184,6 +184,7 @@ export default function DataProvider (props) {
 
   const [cart, setCart] = useState([]);
 
+  // ADD TO CART FOR SHOP PAGE
   const addCart = (id) => {
     const check = cart.every((item) => {
       return item._id !== id;
@@ -191,6 +192,21 @@ export default function DataProvider (props) {
     if (check) {
       const data = products.filter((product) => {
         return product._id === id;
+      });
+      setCart([...cart, ...data]);
+    } else {
+      alert("The product has been added to cart.");
+    }
+  };
+
+  // ADD TO CART FOR HOME PAGE
+  const addHomeCart = (id) => {
+    const check = cart.every((item) => {
+      return item._id !== id;
+    });
+    if (check) {
+      const data = homeProducts.filter((homeProduct) => {
+        return homeProduct._id === id;
       });
       setCart([...cart, ...data]);
     } else {
@@ -212,6 +228,7 @@ export default function DataProvider (props) {
     homeProducts: [homeProducts, setHomeProducts],
     cart: [cart, setCart],
     addCart: addCart,
+    addHomeCart: addHomeCart,
   };
 
   return (

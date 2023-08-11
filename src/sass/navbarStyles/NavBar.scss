@@ -135,7 +135,7 @@ li {
   .mobile-menu {
     left: 0;
     width: 100%;
-    height: 90vh;
+    height: 100vh;
     top: -200vh;
     color: $black;
     transition: 0.3s;
@@ -169,10 +169,6 @@ li {
     }
   }
 
-  .mobile-nav {
-    margin: 1rem 0;
-  }
-
   .mobile-nav a.active li {
     font-weight: 500;
     border-bottom: 0.1em solid $black;
@@ -180,7 +176,7 @@ li {
 
   .mobile-menu-bottom {
     width: 100%;
-    padding: 1rem 0;
+    padding: 3rem 0;
     text-align: center;
   }
 

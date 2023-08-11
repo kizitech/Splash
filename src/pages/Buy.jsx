@@ -1,15 +1,15 @@
 import { Link, useParams } from "react-router-dom";
 import { DataContext } from "src/components/DataProvider";
-import React, { useContext, useState, useRef } from "react";
+import React, { useContext, useState, useEffect, useRef } from "react";
 import { Sizes, Colors, StarRating, NavBarDark, ProductThumbnails } from "src/components";
 
-import add from "src/assets/icons/plus.svg";
-import remove from "src/assets/icons/minus.svg";
+import plus from "src/assets/icons/plus.svg";
+import minus from "src/assets/icons/minus.svg";
 
 export default function Details() {
   const { id } = useParams();
   const value = useContext(DataContext);
-  const [products] = value.products;
+  const [products, setProducts] = value.products;
   const addCart = value.addCart;
 
   const [index, setIndex] = useState(0);
@@ -25,6 +25,24 @@ export default function Details() {
     const y = ((e.pageY - top) / height) * 100;
     imgDiv.current.style.backgroundPosition = `${x}% ${y}%`;
   };
+
+    const reduction = (id) => {
+      products.forEach((item) => {
+        if (item._id === id) {
+          item.count === 1 ? (item.count = 1) : (item.count -= 1);
+        }
+      });
+      setProducts([...products]);
+    };
+
+    const increase = (id) => {
+      products.forEach((item) => {
+        if (item._id === id) {
+          item.count += 1;
+        }
+      });
+      setProducts([...products]);
+    };
 
   return (
     <>
@@ -52,11 +70,20 @@ export default function Details() {
 
                 <div className="buy__details-product-quantity">
                   <h3 className="buy__details-product-quantity-title">Quantity</h3>
-                  <div className="quantity">
+                  {/* <div className="quantity">
                     <button onClick={() => reduction(product._id)}><img src={remove} alt="remove from cart" /></button>
                     <span>{product.count}</span>
                     <button onClick={() => increase(product._id)}><img src={add} alt="add to cart" /></button>
-                  </div>
+                  </div> */}
+                  <div className="cart__product-quantity">
+                    <button onClick={() => reduction(product._id)} className="cart__product-quantity-btn">
+                      <img src={minus} alt="remove item to cart" className=" cart__product-quantity-btn--reduce" />
+                    </button>
+                    <span className="cart__product-quantity-count"> {product.count} </span>
+                    <button onClick={() => increase(product._id)} className="cart__product-quantity-btn" >
+                      <img src={plus} alt="add more item to cart" className="cart__product-quantity-btn--increase" />
+                    </button>
+                  </div> 
                 </div>
 
                 <div className="buy__details-product-colors">
