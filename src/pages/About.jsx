@@ -12,7 +12,7 @@ function About() {
         <h1 className="about__title">About Us</h1>
         <section className="about__section">
           <div className="about__info">
-            <img src={sketch} title="Some Team Work" alt="clothes sketches" className="about__image" />
+            <img src={sketch} title="Some Of Our Team Works" alt="clothes sketches" className="about__image" />
             <p className="about__text">
               <strong>
                 We give the most sophisticating and most beautiful look to our

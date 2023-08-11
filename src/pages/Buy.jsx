@@ -71,7 +71,7 @@ export default function Details() {
 
                 <div className="buy__details-product-buttons">
                   <button onClick={() => addCart(product._id)}className="buy__details-add-to-cart-button">Add to Cart</button>
-                  <Link to="/cart" className="buy__details-view-cart-link">View Cart</Link>
+                  <Link to="/shop/cart" className="buy__details-view-cart-link">View Cart</Link>
                 </div>
               </div>
             </div>

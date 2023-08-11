@@ -45,7 +45,7 @@ function NavBar() {
             </form>
             <div className="cart-icon">
                 <span>{cart.length}</span>
-                <Link to="/cart"><img src={cartIcon} alt="cart for product" /></Link>
+                <Link to="/shop/cart"><img src={cartIcon} alt="cart for product" /></Link>
             </div>
       </div>
 
@@ -64,7 +64,7 @@ function NavBar() {
         <div className="mobile-menu-bottom">
           <div className="menu-icons">
             <div role='input'><input type="text" placeholder="Search" /></div>
-            <Link to="/cart" role="cart">
+            <Link to="/shop/cart" role="cart">
                 <div className="cart-icon">
                     <span>{cart.length}</span>
                     <img src={cartIcon} alt="cart for product" />

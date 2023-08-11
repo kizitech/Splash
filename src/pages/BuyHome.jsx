@@ -109,7 +109,7 @@ export default function Details() {
                   >
                     Add to Cart
                   </button>
-                  <Link to="/cart" className="buy__details-view-cart-link">
+                  <Link to="/shop/cart" className="buy__details-view-cart-link">
                     View Cart
                   </Link>
                 </div>
