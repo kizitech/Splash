@@ -1,0 +1,74 @@
+@import "/src/sass/configStyles/config";
+
+.shipping {
+  &__content {
+    width: 100%;
+    padding: $p-md;
+    @include flex(unset, center, center, column);
+  }
+
+  &__form {
+    gap: 1.5em;
+    width: 100%;
+    @include flex(left, center, center, column);
+
+    input {
+      width: 100%;
+      outline: none;
+      padding: 1em;
+      border-radius: 0;
+      border: 0.125em solid $black;
+
+      &::placeholder {
+        color: $black;
+      }
+    }
+  }
+
+  &__title {
+    width: 100%;
+    font-size: $h4;
+    padding: 0.5em 0;
+  }
+
+  &__input--long2 {
+    display: none;
+  }
+
+  &__link {
+    width: 100%;
+    margin-top: 1.5em;
+    @include flex(left, center, center, row);
+  }
+
+  &__button {
+    width: 100%;
+    @include button;
+  }
+}
+
+@media (min-width: 50em) {
+  .shipping {
+    &__content {
+      width: 70%;
+    }
+
+    &__link {
+      width: 100%;
+      justify-content: flex-end;
+    }
+
+    &__button {
+      width: unset;
+      @include button;
+    }
+
+    &__input--long1 {
+        display: none;
+    }
+
+    &__input--long2 {
+        display: block;
+    }
+  }
+}
