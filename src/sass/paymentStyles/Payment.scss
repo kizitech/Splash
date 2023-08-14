@@ -1,0 +1,167 @@
+.payment {
+  &-form {
+    width: 90%;
+    padding: $p-md 0;
+    position: relative;
+    margin: $p-sm 0 5em;
+    @include flex(center, center, center, column);
+
+    @media (min-width: 50em) {
+      width: 70%;
+    }
+
+    &__form {
+      gap: 1em;
+      width: 100%;
+      @include flex(center, center, center, column);
+    }
+
+    &__contact,
+    &__ship-to,
+    &__total,
+    &__Code {
+      width: 100%;
+      position: relative;
+      padding: 1em 1.5em;
+      background-color: $white;
+      border: 2px solid $black;
+      @include flex(left, flex-start, center, column);
+
+      input {
+        width: 100%;
+        outline: none;
+        padding-inline: 4em;
+      }
+
+      label {
+        color: $black;
+        position: absolute;
+        font-size: 0.875rem;
+      }
+    }
+
+    &__label {
+      left: 1.5em;
+    }
+
+    &__change {
+      right: 1.5em;
+      cursor: pointer;
+      text-decoration: underline;
+    }
+
+    &__total {
+      width: 100%;
+      outline: none;
+      padding: 1.3em 1.5em;
+
+      &-value {
+        margin-left: 4em;
+
+        strong {
+          font-size: $h4;
+        }
+      }
+    }
+
+    &__additional-info {
+      width: 100%;
+      font-size: $h4;
+      padding: 1em 0;
+      text-align: left;
+    }
+
+    &__Code {
+      outline: none;
+    }
+  }
+
+  &-payment {
+    padding: $p-md;
+
+    &__info {
+      gap: 0.5em;
+      margin-bottom: 2em;
+      @include flex(left, flex-start, center, column);
+
+      &-heading {
+        font-size: $h4;
+      }
+    }
+
+    &__radio {
+      width: 100%;
+      padding: 1em;
+      @include flex(left, center, space-between, row);
+
+      &-inner {
+        gap: 1em;
+        @include flex(left, center, flex-start, row);
+      }
+    }
+
+    &__card {
+      &-icons {
+        gap: 1em;
+        @include flex(left, center, flex-start, row);
+      }
+
+      &-details {
+        gap: 2em;
+        padding: 1em 0;
+        background: $lightdark;
+        @include flex(left, flex-start, center, column);
+      }
+
+      &-inputs {
+        gap: 1em;
+        flex-wrap: wrap;
+        padding: 0 $p-sm;
+        @include flex(left, center, flex-start, unset);
+      }
+
+      &-input {
+        gap: 0.5em;
+        @include flex(left, flex-start, center, column);
+
+        input {
+          outline: none;
+          color: $black;
+          padding: 0.5em;
+
+          &::placeholder {
+            color: $black;
+            text-align: center;
+          }
+        }
+      }
+
+      &-save-info {
+        padding: 0 $p-sm;
+      }
+    }
+
+    a {
+      width: 100%;
+      @include flex(left, flex-start, flex-end, row);
+
+      button {
+        width: 100%;
+        margin-top: 3em;
+        @include button;
+
+        @media (min-width: 50em) {
+          width: unset;
+        }
+      }
+    }
+  }
+}
+
+.payment-payment__radio {
+  border: 1px solid #ddd;
+}
+
+.payment-payment__card-details {
+  border: 1px solid #ddd;
+}
