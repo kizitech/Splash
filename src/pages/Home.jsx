@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import React, { useContext } from 'react';
-import NavBar from "src/components/NavBar";
+import { NavBar } from "src/components";
 import StarRating from "src/components/StarRating";
 import { DataContext } from 'src/components/DataProvider'
 

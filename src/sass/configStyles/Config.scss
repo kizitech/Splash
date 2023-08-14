@@ -176,7 +176,7 @@ $h6: calc(1.1rem + ((1vw - 1rem) * 0.5));
   font-family: $poppins;
   border: 2px solid $black;
 
-  &:hover {
+  &:hover, &:focus {
     color: $black;
     border: 2px solid $black;
     background-color: $white;
