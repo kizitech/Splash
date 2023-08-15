@@ -1,0 +1,34 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100&display=swap");
+
+.preloader {
+  gap: 3em;
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  background: $black;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 50;
+  color: $white;
+  overflow: hidden;
+  padding: 0 $p-md;
+  font-family: 'Inter', sans-serif;
+  height: calc(var(--vh, 1vh) * 100);
+  @include flex(center, center, center, column);
+
+  img {
+    height: 5.5em;
+  }
+
+  .texts-container {
+    gap: 0.6em;
+    opacity: 0;
+    width: 22em;
+    flex-wrap: wrap;
+    overflow: hidden;
+    font-weight: 100;
+    font-size: 1.25rem;
+    @include flex(center, center, center, row);
+  }
+}

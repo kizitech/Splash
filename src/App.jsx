@@ -2,7 +2,7 @@ import React from 'react';
 import ScrollToTop from "react-scroll-to-top";
 import sass from './sass/mainStyles/main.scss';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-import { Footer, DataProvider, ScrollRestoration, BackToTop as Top } from "./components";
+import { Footer, DataProvider, ScrollRestoration, PreLoader, Switch, BackToTop as Top } from "./components";
 import { Buy, Home, Cart, Blog, Shop, About, Contact, BuyHome, Payment, Shipping, Information, AccountDetails, PaymentSuccessful } from "./pages";
 
 
@@ -11,7 +11,9 @@ function App() {
     <DataProvider>
       <div className="App">
         <Router>
+          <PreLoader />
           <ScrollRestoration />
+          <Switch />
           <ScrollToTop smooth top={200} component={<Top />} />
           <Routes>
             <Route path="/" element={<Home />} />

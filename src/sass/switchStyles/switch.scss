@@ -1,0 +1,129 @@
+.switch {
+  left: 5%;
+  bottom: 5%;
+  cursor: pointer;
+  position: fixed;
+  z-index: 9 !important;
+  @include flex(left, flex-start, center, row);
+
+  &-text {
+    left: 5%;
+    bottom: 0;
+    position: relative;
+    @include flex(left, flex-start, center, column);
+
+    span {
+      font-size: 2rem;
+      line-height: 1.1;
+      font-weight: 700;
+      margin-left: -0.4em;
+      text-shadow: 0 0 1em;
+    }
+  }
+}
+
+.toggle {
+  display: none;
+}
+
+.toggle,
+.toggle:after,
+.toggle:before,
+.toggle *,
+.toggle *:after,
+.toggle *:before,
+.toggle + .toggle-button {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.toggle::-moz-selection,
+.toggle:after::-moz-selection,
+.toggle:before::-moz-selection,
+.toggle *::-moz-selection,
+.toggle *:after::-moz-selection,
+.toggle *:before::-moz-selection,
+.toggle + .toggle-button::-moz-selection {
+  background: none;
+}
+
+.toggle::selection,
+.toggle:after::selection,
+.toggle:before::selection,
+.toggle *::selection,
+.toggle *:after::selection,
+.toggle *:before::selection,
+.toggle + .toggle-button::selection {
+  background: none;
+}
+
+.toggle + .toggle-button {
+  outline: 0;
+  display: inline-block;
+  width: 4em;
+  height: 2em;
+  position: relative;
+  cursor: pointer;
+  background: $white;
+  border: 2px solid #333;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+body.dark-mode .toggle + .toggle-button {
+  background: #333;
+}
+
+.toggle + .toggle-button:after,
+.toggle + .toggle-button:before {
+  position: relative;
+  display: block;
+  content: "";
+  width: 50%;
+  height: 100%;
+}
+
+.toggle + .toggle-button:after {
+  left: 0;
+}
+
+.toggle + .toggle-button:before {
+  display: none;
+}
+
+.toggle:checked + .toggle-button:after {
+  left: 50%;
+}
+
+.toggle + .toggle-button {
+  padding: 0.5em;
+  margin-bottom: -2.5em;
+  border-radius: 2em;
+  border: 2px solid $black;
+  transform: rotate(90deg);
+  transition: all 0.2s ease;
+  -webkit-transition: all 0.2s ease;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
+}
+
+body.dark-mode .toggle + .toggle-button {
+  border: 2px solid $white;
+}
+
+.toggle + .toggle-button:after {
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  background: $black;
+  content: "";
+  border-radius: 1em;
+}
+
+body.dark-mode .toggle + .toggle-button:after {
+  background: $white;
+}
+
+.toggle:checked + .toggle-button:after {
+  left: 50%;
+}
