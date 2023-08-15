@@ -202,6 +202,9 @@ button {
   list-style-type: none;
 }
 
+
+
+// SCROLL TO TOP BUTTON
 .scroll-to-top {
   width: unset !important;
   height: unset !important;
@@ -257,6 +260,13 @@ button {
 }
 
 
+
+@media (min-width: 87.5em) {
+  body {
+    margin: auto;
+    max-width: 1400px;
+  }
+}
 
 
 
