@@ -135,6 +135,10 @@
           }
         }
       }
+      
+              button {
+                @include button;
+              }
 
       &-save-info {
         padding: 0 $p-sm;

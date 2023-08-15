@@ -238,6 +238,7 @@ function Payment() {
                         required
                       />
                     </div>
+                    <button type="submit">Send Details</button>
                   </div>
 
                   {/* SAVE CARD DETAILS */}

@@ -1,0 +1,96 @@
+.account-details {
+  &__section {
+    gap: 2em;
+    margin: $p-md;
+    padding: $p-md;
+    fill: #fff;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
+    @include flex(left, center, center, column);
+  }
+
+  &__icons {
+    width: 100%;
+    @include flex(unset, center, space-between, row);
+  }
+
+  &__uba {
+    height: 4.5em;
+    width: 6em;
+  }
+
+  &__message {
+    p {
+      line-height: 1.5;
+    }
+  }
+
+  &__options {
+    gap: 3em;
+    @include flex(unset, center, center, row);
+
+    label {
+      gap: 0.3em;
+      @include flex(unset, center, center, row);
+    }
+  }
+
+  &__resend {
+    gap: 2em;
+    width: 100%;
+    @include flex(unset, flex-start, center, column);
+
+    & > p {
+      font-size: 0.8rem;
+    }
+  }
+
+  &__form {
+    width: 100%;
+
+    &-heading {
+      font-size: $h5;
+    }
+    &-group {
+      gap: 3em;
+      margin-top: 2em;
+      @include flex(unset, flex-start, center, row);
+    }
+
+    &-labels,
+    &-values {
+      gap: 0.8em;
+      width: 100%;
+      @include flex(unset, flex-start, center, column);
+
+      input {
+        outline: none;
+        border-radius: 0;
+
+        &:focus {
+          border: 2px solid $black;
+        }
+      }
+    }
+  }
+
+  &__buttons {
+    gap: 7em;
+    @include flex(unset, flex-start, center, row);
+
+    a {
+      @include button;
+    }
+
+    a:nth-child(1) {
+      color: $black;
+      background: $white;
+      border: 2px solid $black;
+
+      &:hover {
+        color: $white;
+        background: $black;
+        border: 2px solid $white;
+      }
+    }
+  }
+}
