@@ -243,3 +243,58 @@ li {
     height: 6em;
   }
 }
+
+.dark-mode {
+
+  input, select {
+    color: $black;
+  }
+  .mobile-menu {
+    background: $darkmode;
+
+    img {
+      filter: invert(1);
+    }
+  }
+
+  .logo-dark, .close-menu, .open-menu {
+    filter: invert(1);
+  }
+
+  .navbar-bg {
+    background: $darkmode;
+  }
+
+  .navbar-dark-bg {
+    background-color: $darkmode;
+  }
+
+  .mobile-menu li {
+    color: #ccc;
+    border-bottom: 1px solid #333;
+
+    &:hover {
+      border-bottom: 1px solid #666;
+    }
+  }
+
+  .mobile-nav a.active li {
+    color: #ccc;
+    border-bottom: 0.1em solid #ccc;
+  }
+
+  .menu-icons {
+    a,
+    div[role="input"] {
+      border: none;
+      background: #ccc;
+    }
+
+    input {
+      &::placeholder {
+        color: $black;
+        @include flex(left, flex-start, center, column);
+      }
+    }
+  }
+}

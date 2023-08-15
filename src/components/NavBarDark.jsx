@@ -29,7 +29,7 @@ function NavBar() {
     <div className="dark-navbar">
         <Headroom>
         <header name="home" className={nav ? "navbar-dark navbar-dark-bg" : "navbar-dark"}>
-    <Link to="/"><img src={logoDark} alt="logo" /></Link>
+    <Link to="/"><img src={logoDark} alt="logo" className="logo-dark" /></Link>
 
       <ul className="nav-menu">
         <NavLink to="/" smooth={true} duration={500}><li>Home</li></NavLink>
@@ -50,7 +50,7 @@ function NavBar() {
       </div>
 
       <div className="hamburger" style={ {cursor: "Pointer"} } onClick={handleNav}>
-        {!nav ? (<HiOutlineMenuAlt4 size={30}  className="icon" />) : (<VscChromeClose size={30} style={{ color: "#000" }} className="icon" />)}
+        {!nav ? (<HiOutlineMenuAlt4 size={30}  className="icon open-menu" />) : (<VscChromeClose size={30} style={{ color: "#000" }} className="icon close-menu" />)}
       </div>
 
       <div className={nav ? "mobile-menu active" : "mobile-menu"}>

@@ -101,7 +101,7 @@
       gap: 0;
       grid-template-columns: 30% 30% 40%;
     }
-    
+
     &__link {
       font-size: calc($h6 - 0.2rem);
     }
@@ -118,6 +118,23 @@
       width: unset;
       align-items: baseline;
       justify-content: flex-start;
+    }
+  }
+}
+
+body.dark-mode {
+  .footer {
+    
+    &__closing {
+      img {
+        filter: invert(1);
+      }
+    }
+
+    &__social-media {
+      img {
+        filter: invert(1);
+      }
     }
   }
 }

@@ -25,7 +25,7 @@ const Home = () => {
       <div className="home__hero-content">
         <h1 className="home__hero-title">Make a statement with every outfit</h1>
         <Link to="/shop" className="home__hero-link">
-          <button type="button" className="home__hero-button">Start shopping</button>
+          <button type="button" className="home__hero-button wt-btn_sign"><span className="wt-btn_sign-bound"><span data-width="#fff" data-text="Start Shopping">Start Shopping</span></span></button>
         </Link>
       </div>
     </div>

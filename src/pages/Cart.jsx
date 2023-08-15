@@ -111,7 +111,7 @@ export default function Cart() {
                 </div>
 
                 <div onClick={() => removeProduct(product._id)} title="Remove item from cart" className="cart__product-remove" >
-                  <VscChromeClose />
+                  <VscChromeClose className="close-menu" />
                 </div>
               </div>
           </div>

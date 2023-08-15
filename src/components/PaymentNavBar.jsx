@@ -23,11 +23,11 @@ function PaymentNavBar() {
         <ul style={styles.paymentNav}>
           <li><ActiveLink to="/shop/information">Information</ActiveLink></li>
 
-          <li><img src={chevronRight} alt="Continue to shipping" /></li>
+          <li><img src={chevronRight} alt="Continue to shipping" className="open-menu" /></li>
 
           <li><ActiveLink to="/shop/shipping">Shipping</ActiveLink></li>
 
-          <li><img src={chevronRight} alt="Continue to payment" /></li>
+          <li><img src={chevronRight} alt="Continue to payment" className="open-menu" /></li>
 
           <li><ActiveLink to="/shop/payment">Payment</ActiveLink></li>
         </ul>

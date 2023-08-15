@@ -143,12 +143,13 @@ textarea {
 // PRIMARY COLORS
 $white: #fff;
 $black: #000;
+$darkmode: #25272a;
 $lightdark: rgba(217, 217, 217, 0.46);
 
 
 body.dark-mode {
   color: $white;
-  background: #25272a;
+  background: $darkmode;
 }
 
 // FONT FAMILY
