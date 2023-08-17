@@ -1,9 +1,9 @@
 import React from 'react';
+import "src/sass/mainStyles/Main.scss";
 import ScrollToTop from "react-scroll-to-top";
-import sass from './sass/mainStyles/main.scss';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import { Footer, DataProvider, ScrollRestoration, PreLoader, Switch, BackToTop as Top } from "./components";
-import { Buy, Home, Cart, Blog, Shop, About, Contact, BuyHome, Payment, Shipping, Information, AccountDetails, PaymentSuccessful } from "./pages";
+import { Buy, Home, Cart, Blog, Shop, About, Contact, BuyHome, Payment, Shipping, ErrorPage, Information, AccountDetails, PaymentSuccessful } from "./pages";
 
 
 function App() {
@@ -23,12 +23,13 @@ function App() {
             <Route path="/shop/cart" element={<Cart />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/shop/payment" element={<Payment />} />
-            <Route path="/shop/shipping" element={<Shipping />} />
             <Route path="/shop/products/:id" element={<Buy />} />
+            <Route path="/shop/shipping" element={<Shipping />} />
+            <Route path="*" element={<ErrorPage errorCode={404} />} />
             <Route path="/shop/information" element={<Information />} />
             <Route path="/shop/home-products/:id" element={<BuyHome />} />
             <Route path="/shop/account-details" element={<AccountDetails />} />
-            <Route path="/shop/payment-successful" element={<PaymentSuccessful />} />
+            <Route path="/shop/payment-successful" element={<PaymentSuccessful />}/>
           </Routes>
           <Footer />
         </Router>

@@ -105,7 +105,7 @@
     }
 
     &-container {
-      gap: 1.5em;
+      gap: 3.5em;
       display: grid;
       position: relative;
       grid-template-columns: 1fr;
@@ -172,7 +172,7 @@
   font-size: 20px;
   font-weight: 500;
   white-space: nowrap;
-  letter-spacing: -0.21px;
+  letter-spacing: 1.5px;
   -webkit-transition: color 0.5s;
   -moz-transition: color 0.5s;
   -o-transition: color 0.5s;
@@ -181,7 +181,8 @@
   color: $white;
   background: none;
   border: none;
-  height: 2.5em;
+  height: 3.5em;
+  width: 12em;
   border: 2px solid $white;
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
@@ -189,6 +190,7 @@
 
   &:hover {
     color: $black;
+    font-weight: 600;
     background: $white;
   }
 }

@@ -8,6 +8,7 @@ import Contact from "./Contact";
 import BuyHome from "./BuyHome";
 import Payment from "./Payment";
 import Shipping from "./Shipping";
+import ErrorPage from "./ErrorPage";
 import Information from "./Information";
 import AccountDetails from "./AccountDetails";
 import PaymentSuccessful from "./PaymentSuccessful";
@@ -23,6 +24,7 @@ export {
     Payment,
     BuyHome,
     Shipping,
+    ErrorPage,
     Information,
     AccountDetails,
     PaymentSuccessful,

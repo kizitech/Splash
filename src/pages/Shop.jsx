@@ -1,10 +1,11 @@
 import { Link } from "react-router-dom";
-import React, { useContext } from 'react';
+import React, { useState, useContext } from 'react';
 import StarRating from "src/components/StarRating";
 import NavBarDark from "src/components/NavBarDark";
 import { DataContext } from 'src/components/DataProvider'
 
 const Shop = () => {
+  const [search, setSearch] = useState("");
   const value = useContext(DataContext)
   const [products] = value.products
   const addCart = value.addCart
@@ -19,7 +20,12 @@ const Shop = () => {
                 
                 <div className="shop__clothes-container">
 
-                    {products.map(product => (
+                    {products
+                    .filter((product) => {
+                        return search.toLowerCase() === '' ? product : product.toLowerCase().includes(search)
+                    })
+
+                    .map(product => (
                     <div className="shop__clothes-item" key={product._id}>
 
                         <Link className="shop__clothes-image" to={`/shop/products/${product._id}`}>

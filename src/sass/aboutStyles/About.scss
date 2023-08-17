@@ -52,6 +52,7 @@
     }
 
     &-member {
+      color: $black;
       @include flex(center, center, center, column);
     }
 

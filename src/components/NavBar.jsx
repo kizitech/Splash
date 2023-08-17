@@ -24,6 +24,7 @@ function NavBar() {
   const value = useContext(DataContext)
   const [cart] = value.cart
 
+
   return (
     <>
       <div className="light-navbar">
@@ -40,7 +41,7 @@ function NavBar() {
       </ul>
       <div className="nav-icons">
             <form className="search">
-                <input type="text" className="search-input" />
+                <Link to="/shop"><input type="text" className="search-input" /></Link>
                 <img src={searchIcon} alt="search product" className="search-icon" />
             </form>
             <div className="cart-icon">
@@ -63,7 +64,7 @@ function NavBar() {
         </ul>
         <div className="mobile-menu-bottom">
           <div className="menu-icons">
-            <div role='input'><input type="text" placeholder="Search" /></div>
+            <Link to="/shop"><div role='input'><input type="text" placeholder="Search" /></div></Link>
             <Link to="/shop/cart" role="cart">
                 <div className="cart-icon">
                     <span>{cart.length}</span>

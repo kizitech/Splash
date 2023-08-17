@@ -100,3 +100,7 @@
   height: 100vh;
   @include flex(center, center, center, column);
 }
+
+body.dark-mode .cart__product-remove:hover {
+  color: $black;
+}

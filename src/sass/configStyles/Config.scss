@@ -146,10 +146,32 @@ $black: #000;
 $darkmode: #25272a;
 $lightdark: rgba(217, 217, 217, 0.46);
 
-
 body.dark-mode {
   color: $white;
   background: $darkmode;
+
+  .payment,
+  .shipping,
+  .information {
+    input,
+    select,
+    textarea {
+      color: $white;
+      background-color: transparent;
+      border: 0.125em solid #a0a0a0;
+
+      &::placeholder {
+        color: $white;
+      }
+      &:focus {
+        border: 0.2em solid $white;
+      }
+    }
+  }
+
+  option {
+    color: $black;
+  }
 }
 
 // FONT FAMILY
@@ -272,6 +294,14 @@ button {
   100% {
     transform: translateY(0);
     opacity: 1;
+  }
+}
+
+body.dark-mode .scroll-to-top {
+  background: $darkmode;
+
+  .arrow path {
+    fill: $white;
   }
 }
 

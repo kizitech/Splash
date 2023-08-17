@@ -245,8 +245,18 @@ li {
 }
 
 .dark-mode {
+  .navbar-dark {
+    color: $white;
 
-  input, select {
+    .nav-icons {
+      img {
+        filter: invert(0);
+      }
+    }
+  }
+
+  input,
+  select {
     color: $black;
   }
   .mobile-menu {
@@ -257,7 +267,9 @@ li {
     }
   }
 
-  .logo-dark, .close-menu, .open-menu {
+  .logo-dark,
+  .close-menu,
+  .open-menu {
     filter: invert(1);
   }
 

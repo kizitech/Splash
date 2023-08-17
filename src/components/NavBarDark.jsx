@@ -23,6 +23,8 @@ function NavBar() {
   const value = useContext(DataContext)
   const [cart] = value.cart
 
+  const [search, setSearch] = useState("");
+
   return (
     <>
 
@@ -40,7 +42,7 @@ function NavBar() {
       </ul>
       <div className="nav-icons">
             <form className="search">
-                <input type="text" className="search-input" />
+                <input onChange={(e) => setSearch(e.target.value)} type="text" className="search-input" placeholder="Search..." />
                 <img src={searchIcon} alt="search product" className="search-icon" />
             </form>
             <div className="cart-icon">

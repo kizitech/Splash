@@ -1,0 +1,41 @@
+.error-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+
+  .error-container {
+    text-align: center;
+    padding: 2rem;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+    .error-illustration {
+      margin-top: 2rem;
+
+      svg {
+        max-width: 100%;
+        height: auto;
+      }
+    }
+  }
+
+  .error-code {
+    font-size: 3rem;
+    color: #e74c3c;
+    margin: 0;
+  }
+
+  .error-message {
+    font-size: 1.5rem;
+    color: #333;
+    margin: 1rem 0;
+  }
+
+  .error-description {
+    font-size: 1rem;
+    color: #777;
+    margin: 0;
+  }
+}
