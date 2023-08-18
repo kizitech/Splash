@@ -17,13 +17,20 @@ const Shop = () => {
         <main className="shop">
             <div className="shop__clothes">
                 <div className="shop__clothes-heading"><h2>Shop</h2></div>
+                <input type="text" name="search" className="input" placeholder="search..." onChange={(event) => {
+              setSearch(event.target.value);
+            }} />
                 
                 <div className="shop__clothes-container">
 
                     {products
-                    .filter((product) => {
-                        return search.toLowerCase() === '' ? product : product.toLowerCase().includes(search)
-                    })
+                    .filter((val) => {
+                if (search == " ") {
+                  return val;
+                } else if (val.title.toLowerCase().includes(search.toLowerCase())) {
+                  return val;
+                }
+              })
 
                     .map(product => (
                     <div className="shop__clothes-item" key={product._id}>

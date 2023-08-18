@@ -18,7 +18,9 @@ import homeModel4 from "src/assets/images/home/Rectangle 39.png";
 
 export const DataContext = createContext();
 
-export default function DataProvider (props) {
+const cartFromLocalStorage = JSON.parse(localStorage.getItem("cart") || "[]");
+
+export default function DataProvider(props) {
   const [products, setProducts] = useState([
     {
       _id: "01",
@@ -182,7 +184,7 @@ export default function DataProvider (props) {
     },
   ]);
 
-  const [cart, setCart] = useState([]);
+  const [cart, setCart] = useState(cartFromLocalStorage);
 
   // ADD TO CART FOR SHOP PAGE
   const addCart = (id) => {
@@ -214,13 +216,9 @@ export default function DataProvider (props) {
     }
   };
 
+  // LOCAL STORAGE PERSIST
   useEffect(() => {
-    const dataCart = JSON.parse(localStorage.getItem("dataCart"));
-    if (dataCart) setCart(dataCart);
-  }, []);
-
-  useEffect(() => {
-    localStorage.setItem("dataCart", JSON.stringify(cart));
+    localStorage.setItem("cart", JSON.stringify(cart));
   }, [cart]);
 
   const value = {
@@ -234,4 +232,4 @@ export default function DataProvider (props) {
   return (
     <DataContext.Provider value={value}>{props.children}</DataContext.Provider>
   );
-};
+}

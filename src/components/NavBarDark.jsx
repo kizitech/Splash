@@ -42,7 +42,7 @@ function NavBar() {
       </ul>
       <div className="nav-icons">
             <form className="search">
-                <input onChange={(e) => setSearch(e.target.value)} type="text" className="search-input" placeholder="Search..." />
+                <input onChange={(event) => {setSearch(event.target.value);}} type="text" className="search-input" placeholder="Search..." />
                 <img src={searchIcon} alt="search product" className="search-icon" />
             </form>
             <div className="cart-icon">
