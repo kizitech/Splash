@@ -1,7 +1,8 @@
 import Headroom from "react-headroom"
 import { DataContext } from './DataProvider'
-import React, { useState, useContext } from 'react'
 import { Link, NavLink } from "react-router-dom";
+import React, { useState, useContext } from 'react'
+import SearchBar from "./SearchBar";
 
 import { HiOutlineMenuAlt4 } from "react-icons/hi";
 import { VscChromeClose } from "react-icons/vsc";
@@ -23,7 +24,7 @@ function NavBar() {
   const value = useContext(DataContext)
   const [cart] = value.cart
 
-  const [search, setSearch] = useState("");
+  const [SearchTerm, setSearchTerm] = useState("");
 
   return (
     <>
@@ -41,9 +42,10 @@ function NavBar() {
         <NavLink to="/contact" smooth={true} duration={500}><li>Contact</li></NavLink>
       </ul>
       <div className="nav-icons">
-            <form className="search">
-                <input onChange={(event) => {setSearch(event.target.value);}} type="text" className="search-input" placeholder="Search..." />
-                <img src={searchIcon} alt="search product" className="search-icon" />
+            <SearchBar />
+            <form className="search" onSubmit={() => {}}>
+                <input onChange={(event) => {setSearchTerm(event.target.value)}} value="" type="text" className="search-input" placeholder="Search..." />
+                <button type="submit"><img src={searchIcon} alt="search product" className="search-icon" /></button>
             </form>
             <div className="cart-icon">
                 <span>{cart.length}</span>

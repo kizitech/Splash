@@ -54,20 +54,21 @@ export default function Cart() {
     }
   };
 
-    const clearCart = () => {
-      if (window.confirm("Do you want to empty your cart?")) {
-        setCart([]);
-      }
-    };
+  const clearCart = () => {
+    if (window.confirm("Do you want to empty your cart?")) {
+      setCart([]);
+    }
+  };
 
   if (cart.length === 0)
     return (
       <>
         <NavBarDark />
         <div className="cart-empty">
-          <h2 style={{ textAlign: "center", fontSize: "3.5rem" }}>
-            Your Cart Is Empty
-          </h2>
+          <h2>Your Cart Is Empty</h2>
+          <Link to="/shop">
+            <button type="button">Start Shopping</button>
+          </Link>
         </div>
       </>
     );
@@ -85,45 +86,67 @@ export default function Cart() {
             />
 
             <div className="buy__details-product-info">
-                <h2 className="buy__details-product-title" title={product.title}>{product.title}</h2>
-                <p className="buy__details-product-description">{product.description}</p>
+              <h2 className="buy__details-product-title" title={product.title}>
+                {product.title}
+              </h2>
+              <p className="buy__details-product-description">
+                {product.description}
+              </p>
 
-                <div className="buy__details-product-rating"><StarRating /></div>
-                <h2 className="buy__details-product-price"><strong>${product.price}</strong></h2>
+              <div className="buy__details-product-rating">
+                <StarRating />
+              </div>
+              <h2 className="buy__details-product-price">
+                <strong>${product.price}</strong>
+              </h2>
 
-                <div className="buy__details-product-quantity">
-                  <h3 className="buy__details-product-quantity-title">Quantity</h3>
-                  <div className="quantity">
-                    <button onClick={() => reduction(product._id)}><img src={minus} alt="remove one from cart" /></button>
-                    <span>{product.count}</span>
-                    <button onClick={() => increase(product._id)}><img src={plus} alt="add one more to cart" /></button>
-                  </div>
-                </div>
-
-                <div className="buy__details-product-colors">
-                  <h3 className="buy__details-product-colors-title">Colors:</h3>
-                  <Colors colors={product.colors} />
-                </div>
-
-                <div className="buy__details-product-sizes">
-                  <h3 className="buy__details-product-sizes-title">Sizes:</h3>
-                  <Sizes sizes={product.sizes} />
-                </div>
-
-                <div onClick={() => removeProduct(product._id)} title="Remove item from cart" className="cart__product-remove" >
-                  <VscChromeClose className="close-menu" />
+              <div className="buy__details-product-quantity">
+                <h3 className="buy__details-product-quantity-title">
+                  Quantity
+                </h3>
+                <div className="quantity">
+                  <button onClick={() => reduction(product._id)}>
+                    <img src={minus} alt="remove one from cart" />
+                  </button>
+                  <span>{product.count}</span>
+                  <button onClick={() => increase(product._id)}>
+                    <img src={plus} alt="add one more to cart" />
+                  </button>
                 </div>
               </div>
+
+              <div className="buy__details-product-colors">
+                <h3 className="buy__details-product-colors-title">Colors:</h3>
+                <Colors colors={product.colors} />
+              </div>
+
+              <div className="buy__details-product-sizes">
+                <h3 className="buy__details-product-sizes-title">Sizes:</h3>
+                <Sizes sizes={product.sizes} />
+              </div>
+
+              <div
+                onClick={() => removeProduct(product._id)}
+                title="Remove item from cart"
+                className="cart__product-remove"
+              >
+                <VscChromeClose className="close-menu" />
+              </div>
+            </div>
           </div>
         ))}
 
-          <div className="cart__summary">
-              <div>
-                <button type='submit' onClick={() => clearCart()}>Clear Cart <RiDeleteBin6Line /></button>
-                <button className="cart__summary-total">Total: $ {total}</button>
-              </div>
-              <Link to="/shop/information" className="cart__summary-link">Pay</Link>
-          </div> 
+        <div className="cart__summary">
+          <div>
+            <button type="submit" onClick={() => clearCart()}>
+              Clear Cart <RiDeleteBin6Line />
+            </button>
+            <button className="cart__summary-total">Total: $ {total}</button>
+          </div>
+          <Link to="/shop/information" className="cart__summary-link">
+            Pay
+          </Link>
+        </div>
       </main>
     </>
   );

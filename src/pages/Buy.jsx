@@ -1,6 +1,6 @@
 import { Link, useParams } from "react-router-dom";
 import { DataContext } from "src/components/DataProvider";
-import React, { useContext, useState, useEffect, useRef } from "react";
+import React, { useContext, useState, useRef } from "react";
 import { Sizes, Colors, StarRating, NavBarDark, ProductThumbnails } from "src/components";
 
 import plus from "src/assets/icons/plus.svg";
@@ -70,11 +70,7 @@ export default function Details() {
 
                 <div className="buy__details-product-quantity">
                   <h3 className="buy__details-product-quantity-title">Quantity</h3>
-                  {/* <div className="quantity">
-                    <button onClick={() => reduction(product._id)}><img src={remove} alt="remove from cart" /></button>
-                    <span>{product.count}</span>
-                    <button onClick={() => increase(product._id)}><img src={add} alt="add to cart" /></button>
-                  </div> */}
+
                   <div className="cart__product-quantity">
                     <button onClick={() => reduction(product._id)} className="cart__product-quantity-btn">
                       <img src={minus} alt="remove item to cart" className=" cart__product-quantity-btn--reduce" />

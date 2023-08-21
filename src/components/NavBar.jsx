@@ -20,7 +20,6 @@ function NavBar() {
   const [nav, setNav] = useState(false);
   const handleNav = () => setNav(!nav);
 
-  const [menu, setMenu] = useState(false)
   const value = useContext(DataContext)
   const [cart] = value.cart
 

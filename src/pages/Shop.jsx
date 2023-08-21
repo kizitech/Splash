@@ -24,13 +24,14 @@ const Shop = () => {
                 <div className="shop__clothes-container">
 
                     {products
+                    
                     .filter((val) => {
-                if (search == " ") {
-                  return val;
-                } else if (val.title.toLowerCase().includes(search.toLowerCase())) {
-                  return val;
-                }
-              })
+                        if (search == " ") {
+                        return val;
+                        } else if (val.title.toLowerCase().includes(search.toLowerCase())) {
+                        return val;
+                        }
+                    })
 
                     .map(product => (
                     <div className="shop__clothes-item" key={product._id}>

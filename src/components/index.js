@@ -5,6 +5,7 @@ import Switch from "./Switch";
 import Footer from "./Footer";
 import Dropdown from "./Dropdown";
 import BackToTop from "./BackToTop";
+import SearchBar from "./SearchBar";
 import PreLoader from "./PreLoader";
 import NavBarDark from "./NavBarDark";
 import StarRating from "./StarRating";
@@ -22,6 +23,7 @@ export {
   Dropdown,
   PreLoader,
   BackToTop,
+  SearchBar,
   NavBarDark,
   StarRating,
   DataProvider,

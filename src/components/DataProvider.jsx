@@ -16,10 +16,8 @@ import homeModel2 from "src/assets/images/home/Rectangle 37.png";
 import homeModel3 from "src/assets/images/home/Rectangle 38.png";
 import homeModel4 from "src/assets/images/home/Rectangle 39.png";
 
+
 export const DataContext = createContext();
-
-const cartFromLocalStorage = JSON.parse(localStorage.getItem("cart") || "[]");
-
 export default function DataProvider(props) {
   const [products, setProducts] = useState([
     {
@@ -157,7 +155,7 @@ export default function DataProvider(props) {
       count: 1,
     },
     {
-      _id: "12",
+      _id: "11",
       title: "Short Casual MIni Gown",
       alt: "A splash model in a stunning outfit",
       images: [homeModel3, model4Thumbnail1, model4Thumbnail2],
@@ -170,7 +168,7 @@ export default function DataProvider(props) {
       count: 1,
     },
     {
-      _id: "13",
+      _id: "12",
       title: "Kims corperate wear",
       alt: "A splash model in a stunning outfit",
       images: [homeModel4, model4Thumbnail1, model4Thumbnail2],
@@ -184,7 +182,6 @@ export default function DataProvider(props) {
     },
   ]);
 
-  const [cart, setCart] = useState(cartFromLocalStorage);
 
   // ADD TO CART FOR SHOP PAGE
   const addCart = (id) => {
@@ -217,6 +214,8 @@ export default function DataProvider(props) {
   };
 
   // LOCAL STORAGE PERSIST
+  const cartFromLocalStorage = JSON.parse(localStorage.getItem("cart") || "[]");
+  const [cart, setCart] = useState(cartFromLocalStorage);
   useEffect(() => {
     localStorage.setItem("cart", JSON.stringify(cart));
   }, [cart]);

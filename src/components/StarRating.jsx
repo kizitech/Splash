@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { AiFillStar } from "react-icons/ai";
 
 const colors = {
@@ -7,7 +7,17 @@ const colors = {
 };
 
 function StarRating() {
-  const [currentValue, setCurrentValue] = useState(0);
+  // LOCAL STORAGE PERSIST
+  const currentValueFromLocalStorage = JSON.parse(
+    localStorage.getItem("currentValue") || "[]"
+  );
+  const [currentValue, setCurrentValue] = useState(
+    currentValueFromLocalStorage
+  );
+  useEffect(() => {
+    localStorage.setItem("currentValue", JSON.stringify(currentValue));
+  }, [currentValue]);
+
   const [hoverValue, setHoverValue] = useState(undefined);
   const stars = Array(5).fill(0);
 
@@ -29,8 +39,8 @@ function StarRating() {
         {stars.map((_, index) => {
           return (
             <AiFillStar
-              key={index}
               size={18}
+              key={index}
               onClick={() => handleClick(index + 1)}
               onMouseOver={() => handleMouseOver(index + 1)}
               onMouseLeave={handleMouseLeave}
@@ -63,6 +73,10 @@ const styles = {
     display: "flex",
     flexDirection: "row",
   },
+  // outer: {
+  //   strokeWidth: 0,
+  //   fill: "#FFCE0C",
+  // },
 };
 
 export default StarRating;

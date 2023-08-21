@@ -109,7 +109,7 @@ li {
     margin-right: 0.5em;
     border-radius: 1.5em;
     letter-spacing: 0.04rem;
-    background: transparent;
+    background: transparent;in
 
     &:focus,
     &:hover {
@@ -244,7 +244,7 @@ li {
   }
 }
 
-.dark-mode {
+body.dark-mode {
   .navbar-dark {
     color: $white;
 
@@ -253,12 +253,12 @@ li {
         filter: invert(0);
       }
     }
+
+    .search input {
+      color: white;
+    }
   }
 
-  input,
-  select {
-    color: $black;
-  }
   .mobile-menu {
     background: $darkmode;
 
@@ -267,10 +267,14 @@ li {
     }
   }
 
+  .nextpage,
   .logo-dark,
-  .close-menu,
-  .open-menu {
+  .close-menu {
     filter: invert(1);
+  }
+
+  .open-menu {
+    filter: invert(0);
   }
 
   .navbar-bg {

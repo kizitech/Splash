@@ -30,16 +30,17 @@ body {
 }
 
 body::-webkit-scrollbar {
-  width: 0.6em;
-}
-
-body::-webkit-scrollbar-track {
-  background-color: #e0e0e0;
+  width: 1em;
 }
 
 body::-webkit-scrollbar-thumb {
   border-radius: 5em;
+  border: 0.3em solid #ffffff;
   background-color: #bebebe;
+}
+
+body.dark-mode::-webkit-scrollbar-thumb {
+  border: 0.3em solid #25272a;
 }
 
 body::-webkit-scrollbar-thumb:hover {
@@ -151,6 +152,7 @@ body.dark-mode {
   background: $darkmode;
 
   .payment,
+  .contact,
   .shipping,
   .information {
     input,
