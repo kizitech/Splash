@@ -24,7 +24,7 @@ function NavBar() {
   const value = useContext(DataContext)
   const [cart] = value.cart
 
-  const [SearchTerm, setSearchTerm] = useState("");
+  // const [SearchTerm, setSearchTerm] = useState("");
 
   return (
     <>
@@ -35,18 +35,14 @@ function NavBar() {
     <Link to="/"><img src={logoDark} alt="logo" className="logo-dark" /></Link>
 
       <ul className="nav-menu">
-        <NavLink to="/" smooth={true} duration={500}><li>Home</li></NavLink>
-        <NavLink to="/shop" smooth={true} duration={500}><li>Shop</li></NavLink>
-        <NavLink to="/blog" smooth={true} duration={500}><li>Blog</li></NavLink>
-        <NavLink to="/about" smooth={true} duration={500}><li>About</li></NavLink>
-        <NavLink to="/contact" smooth={true} duration={500}><li>Contact</li></NavLink>
+        <NavLink to="/" duration={500}><li>Home</li></NavLink>
+        <NavLink to="/shop" duration={500}><li>Shop</li></NavLink>
+        <NavLink to="/blog" duration={500}><li>Blog</li></NavLink>
+        <NavLink to="/about" duration={500}><li>About</li></NavLink>
+        <NavLink to="/contact" duration={500}><li>Contact</li></NavLink>
       </ul>
       <div className="nav-icons">
             <SearchBar />
-            <form className="search" onSubmit={() => {}}>
-                <input onChange={(event) => {setSearchTerm(event.target.value)}} value="" type="text" className="search-input" placeholder="Search..." />
-                <button type="submit"><img src={searchIcon} alt="search product" className="search-icon" /></button>
-            </form>
             <div className="cart-icon">
                 <span>{cart.length}</span>
                 <Link to="/shop/cart"><img src={cartIcon} alt="cart for product" /></Link>
@@ -59,11 +55,11 @@ function NavBar() {
 
       <div className={nav ? "mobile-menu active" : "mobile-menu"}>
         <ul className="mobile-nav">
-          <NavLink to="/" smooth={true} duration={500} onClick={handleNav}><li>Home</li></NavLink>
-          <NavLink to="/shop" smooth={true} duration={500} onClick={handleNav}><li>Shop</li></NavLink>
-          <NavLink to="/blog" smooth={true} duration={500} onClick={handleNav}><li>Blog</li></NavLink>
-          <NavLink to="/about" smooth={true} duration={500} onClick={handleNav}><li>About</li></NavLink>
-          <NavLink to="/contact" smooth={true} duration={500} onClick={handleNav}><li>Contact</li></NavLink>
+          <NavLink to="/" duration={500} onClick={handleNav}><li>Home</li></NavLink>
+          <NavLink to="/shop" duration={500} onClick={handleNav}><li>Shop</li></NavLink>
+          <NavLink to="/blog" duration={500} onClick={handleNav}><li>Blog</li></NavLink>
+          <NavLink to="/about" duration={500} onClick={handleNav}><li>About</li></NavLink>
+          <NavLink to="/contact" duration={500} onClick={handleNav}><li>Contact</li></NavLink>
         </ul>
         <div className="mobile-menu-bottom">
           <div className="menu-icons">

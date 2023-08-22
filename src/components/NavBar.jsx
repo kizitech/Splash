@@ -32,11 +32,11 @@ function NavBar() {
       <Link to="/">{!nav ? (<img src={logo} alt="logo" />) : (<img src={logoDark} alt="logo" className="logo-dark" />)}</Link>
 
       <ul className="nav-menu">
-        <NavLink to="/" smooth={true} duration={500}><li>Home</li></NavLink>
-        <NavLink to="/shop" smooth={true} duration={500}><li>Shop</li></NavLink>
-        <NavLink to="/blog" smooth={true} duration={500}><li>Blog</li></NavLink>
-        <NavLink to="/about" smooth={true} duration={500}><li>About</li></NavLink>
-        <NavLink to="/contact" smooth={true} duration={500}><li>Contact</li></NavLink>
+        <NavLink to="/" duration={500}><li>Home</li></NavLink>
+        <NavLink to="/shop" duration={500}><li>Shop</li></NavLink>
+        <NavLink to="/blog" duration={500}><li>Blog</li></NavLink>
+        <NavLink to="/about" duration={500}><li>About</li></NavLink>
+        <NavLink to="/contact" duration={500}><li>Contact</li></NavLink>
       </ul>
       <div className="nav-icons">
             <form className="search">
@@ -55,11 +55,11 @@ function NavBar() {
 
       <div className={nav ? "mobile-menu active" : "mobile-menu"}>
         <ul className="mobile-nav">
-          <NavLink to="/" smooth={true} duration={500} onClick={handleNav}><li>Home</li></NavLink>
-          <NavLink to="/shop" smooth={true} duration={500} onClick={handleNav}><li>Shop</li></NavLink>
-          <NavLink to="/blog" smooth={true} duration={500} onClick={handleNav}><li>Blog</li></NavLink>
-          <NavLink to="/about" smooth={true} duration={500} onClick={handleNav}><li>About</li></NavLink>
-          <NavLink to="/contact" smooth={true} duration={500} onClick={handleNav}><li>Contact</li></NavLink>
+          <NavLink to="/" duration={500} onClick={handleNav}><li>Home</li></NavLink>
+          <NavLink to="/shop" duration={500} onClick={handleNav}><li>Shop</li></NavLink>
+          <NavLink to="/blog" duration={500} onClick={handleNav}><li>Blog</li></NavLink>
+          <NavLink to="/about" duration={500} onClick={handleNav}><li>About</li></NavLink>
+          <NavLink to="/contact" duration={500} onClick={handleNav}><li>Contact</li></NavLink>
         </ul>
         <div className="mobile-menu-bottom">
           <div className="menu-icons">

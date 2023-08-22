@@ -16,19 +16,31 @@ export const preLoaderAnim = () => {
       opacity: 1,
       ease: "Power3.easeOut",
     })
-    .from(".texts-container span", {
-      duration: 1.5,
+    .from(".preloader img", {
+      duration: 0,
+      opacity: 1,
       delay: 1,
-      y: 70,
-      skewY: 10,
-      stagger: 0.4,
       ease: "Power3.easeOut",
     })
+    .from(".texts-container span", {
+      duration: 1.5,
+      y: 70,
+      skewY: 30,
+      stagger: 0.5,
+      ease: "Power3.easeOut",
+    })
+
     .to(".texts-container span", {
       duration: 1,
       y: 70,
-      skewY: -20,
+      skewY: -30,
       stagger: 0.2,
+      ease: "Power3.easeOut",
+    })
+    .to(".preloader img", {
+      height: "15em",
+      duration: 1.5,
+      opacity: 0,
       ease: "Power3.easeOut",
     })
     .to("body", {
@@ -40,16 +52,11 @@ export const preLoaderAnim = () => {
       ".preloader",
       {
         duration: 1.5,
-        height: "0vh",
+        css: { display: "none" },
         ease: "Power3.easeOut",
-        onComplete: mobileLanding(),
       },
       "-=2"
-    )
-    .to(".preloader", {
-      duration: 0,
-      css: { display: "none" },
-    });
+    );
 };
 
 export const fadeUp = (el, delay = 0) => {
@@ -60,15 +67,4 @@ export const fadeUp = (el, delay = 0) => {
     opacity: 0,
     ease: "power3.Out",
   });
-};
-
-export const mobileLanding = () => {
-  window.innerWidth < 763 &&
-    tl.from(".landing__main2", {
-      duration: 1,
-      delay: 0,
-      opacity: 0,
-      y: 80,
-      ease: "expo.easeOut",
-    });
 };
