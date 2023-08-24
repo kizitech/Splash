@@ -88,7 +88,7 @@
     &__text {
       width: 27em;
     }
-    
+
     &__info {
       gap: $p-sm;
       flex-direction: row;
@@ -123,6 +123,23 @@
     &__image-reverse {
       max-width: 44em;
       margin-top: -9em;
+    }
+  }
+}
+
+body.dark-mode {
+  .about {
+    &__team {
+      &-workers {
+        color: $white;
+        background: $darkmode;
+        box-shadow: 0 0 1.25em rgba(32, 32, 32, 0.75) !important;
+      }
+
+      &-name,
+      &-skill {
+        color: $white;
+      }
     }
   }
 }
