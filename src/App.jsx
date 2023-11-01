@@ -18,13 +18,13 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/blog" element={<Blog />} />
             <Route path="/shop" element={<Shop />} />
+            <Route path="*" element={<ErrorPage />} />
             <Route path="/about" element={<About />} />
             <Route path="/shop/cart" element={<Cart />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/shop/payment" element={<Payment />} />
             <Route path="/shop/products/:id" element={<Buy />} />
             <Route path="/shop/shipping" element={<Shipping />} />
-            <Route path="*" element={<ErrorPage errorCode={404} />} />
             <Route path="/shop/information" element={<Information />} />
             <Route path="/shop/home-products/:id" element={<BuyHome />} />
             <Route path="/shop/account-details" element={<AccountDetails />} />
