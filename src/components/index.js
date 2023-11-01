@@ -1,7 +1,6 @@
 import Sizes from "./Sizes";
 import Colors from "./Colors";
 import NavBar from "./NavBar";
-import Switch from "./Switch";
 import Footer from "./Footer";
 import Dropdown from "./Dropdown";
 import BackToTop from "./BackToTop";
@@ -19,7 +18,6 @@ export {
   Sizes,
   NavBar,
   Footer,
-  Switch,
   Dropdown,
   PreLoader,
   BackToTop,
