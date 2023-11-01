@@ -9,21 +9,20 @@
     padding: 2rem;
     background-color: white;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 
     .error-illustration {
-      margin-top: 2rem;
+      margin: 2rem auto 1em;
 
-      svg {
-        max-width: 100%;
-        height: auto;
+      a {
+        @include button;
       }
     }
   }
 
   .error-code {
     font-size: 3rem;
-    color: #e74c3c;
+    color: #000;
     margin: 0;
   }
 
