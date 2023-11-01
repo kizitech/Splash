@@ -7,8 +7,7 @@
 @import '/src/sass/footerStyles/Footer';
 @import '/src/sass/navbarStyles/NavBar';
 @import '/src/sass/configStyles/Config';
-// edited the file path name to the Switch
-@import '/src/sass/switchStyles/Switch'; 
+@import '../switchStyles/Switch.scss'; 
 @import '/src/sass/contactStyles/Contact';
 @import '/src/sass/paymentStyles/Payment';
 @import '/src/sass/shippingStyles/Shipping';
