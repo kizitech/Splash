@@ -1,1 +1,367 @@
-/*# sourceMappingURL=PaymentSuccessful.css.map */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0 solid transparent;
+  font-family: "Poppins", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  line-height: 1;
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  transition: background-color 350ms ease-out !important;
+  -webkit-transition: background-color 350ms ease-out !important;
+}
+
+body::-webkit-scrollbar {
+  width: 1em;
+}
+
+body::-webkit-scrollbar-thumb {
+  border-radius: 5em;
+  border: 0.3em solid #ffffff;
+  background-color: #bebebe;
+}
+
+body.dark-mode::-webkit-scrollbar-thumb {
+  border: 0.3em solid #25272a;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+  background-color: #aaaaaa;
+}
+
+@media (min-width: 87.5em) {
+  body {
+    margin: auto;
+    max-width: 1400px;
+  }
+}
+img,
+svg,
+video {
+  display: block;
+  max-width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  line-height: inherit;
+  color: inherit;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+button,
+[role=button] {
+  cursor: pointer;
+  background-color: transparent;
+  -webkit-tap-highlight-color: transparent;
+}
+button:focus,
+[role=button]:focus {
+  outline: 0;
+}
+
+a {
+  cursor: pointer;
+  color: inherit;
+  text-decoration: inherit;
+  -webkit-tap-highlight-color: transparent;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+::-moz-placeholder {
+  opacity: 1;
+}
+
+textarea {
+  vertical-align: top;
+  overflow: auto;
+}
+
+[type=checkbox],
+[type=radio] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+[type=checkbox]:focus,
+[type=radio]:focus {
+  outline: 0;
+}
+
+body.dark-mode {
+  color: #fff;
+  background: #25272a;
+}
+body.dark-mode .payment input,
+body.dark-mode .payment select,
+body.dark-mode .payment textarea,
+body.dark-mode .contact input,
+body.dark-mode .contact select,
+body.dark-mode .contact textarea,
+body.dark-mode .shipping input,
+body.dark-mode .shipping select,
+body.dark-mode .shipping textarea,
+body.dark-mode .information input,
+body.dark-mode .information select,
+body.dark-mode .information textarea {
+  color: #fff;
+  background-color: transparent;
+  border: 0.125em solid #a0a0a0;
+}
+body.dark-mode .payment input::-moz-placeholder, body.dark-mode .payment select::-moz-placeholder, body.dark-mode .payment textarea::-moz-placeholder, body.dark-mode .contact input::-moz-placeholder, body.dark-mode .contact select::-moz-placeholder, body.dark-mode .contact textarea::-moz-placeholder, body.dark-mode .shipping input::-moz-placeholder, body.dark-mode .shipping select::-moz-placeholder, body.dark-mode .shipping textarea::-moz-placeholder, body.dark-mode .information input::-moz-placeholder, body.dark-mode .information select::-moz-placeholder, body.dark-mode .information textarea::-moz-placeholder {
+  color: #fff;
+}
+body.dark-mode .payment input::placeholder,
+body.dark-mode .payment select::placeholder,
+body.dark-mode .payment textarea::placeholder,
+body.dark-mode .contact input::placeholder,
+body.dark-mode .contact select::placeholder,
+body.dark-mode .contact textarea::placeholder,
+body.dark-mode .shipping input::placeholder,
+body.dark-mode .shipping select::placeholder,
+body.dark-mode .shipping textarea::placeholder,
+body.dark-mode .information input::placeholder,
+body.dark-mode .information select::placeholder,
+body.dark-mode .information textarea::placeholder {
+  color: #fff;
+}
+body.dark-mode .payment input:focus,
+body.dark-mode .payment select:focus,
+body.dark-mode .payment textarea:focus,
+body.dark-mode .contact input:focus,
+body.dark-mode .contact select:focus,
+body.dark-mode .contact textarea:focus,
+body.dark-mode .shipping input:focus,
+body.dark-mode .shipping select:focus,
+body.dark-mode .shipping textarea:focus,
+body.dark-mode .information input:focus,
+body.dark-mode .information select:focus,
+body.dark-mode .information textarea:focus {
+  border: 0.2em solid #fff;
+}
+body.dark-mode option {
+  color: #000;
+}
+
+nav,
+main,
+footer {
+  width: 100%;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+button {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background: none;
+  text-decoration: none;
+  list-style-type: none;
+}
+
+.scroll-to-top {
+  width: unset !important;
+  height: unset !important;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  box-shadow: 0 0 1.25em rgba(180, 180, 180, 0.75) !important;
+}
+
+.Btn {
+  width: 40px;
+  height: 40px;
+  color: #fff;
+  cursor: pointer;
+  position: relative;
+  border-radius: 1em;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+
+.arrow path {
+  fill: #000;
+}
+
+.text {
+  gap: 0.7em;
+  opacity: 0;
+  width: 100px;
+  bottom: -18px;
+  color: grey;
+  font-size: 0.7rem;
+  position: absolute;
+  transition-duration: 0.7s;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+
+.Btn:hover .text {
+  opacity: 1;
+  transition-duration: 0.7s;
+}
+
+.arrow {
+  animation: slide-in-bottom 5s ease infinite running;
+}
+
+@keyframes slide-in-bottom {
+  0% {
+    transform: translateY(0.7em);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+body.dark-mode .scroll-to-top {
+  background: #25272a;
+}
+body.dark-mode .scroll-to-top .arrow path {
+  fill: #fff;
+}
+
+.btn-radio {
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+       user-select: none;
+}
+@media screen and (max-width: 480px) {
+  .btn-radio {
+    display: block;
+    float: none;
+  }
+  .btn-radio:not(:first-child) {
+    margin-left: 0;
+    margin-top: 15px;
+  }
+}
+.btn-radio svg {
+  fill: none;
+  vertical-align: middle;
+}
+.btn-radio svg circle {
+  stroke-width: 2;
+  stroke: #c8ccd4;
+}
+.btn-radio svg path {
+  stroke: #000;
+}
+.btn-radio svg path.inner {
+  stroke-width: 6;
+  stroke-dasharray: 19;
+  stroke-dashoffset: 19;
+}
+.btn-radio svg path.outer {
+  stroke-width: 2;
+  stroke-dasharray: 57;
+  stroke-dashoffset: 57;
+}
+.btn-radio input {
+  display: none;
+}
+.btn-radio input:checked + svg path {
+  transition: all 0.4s ease;
+}
+.btn-radio input:checked + svg path.inner {
+  stroke-dashoffset: 38;
+  transition-delay: 0.3s;
+}
+.btn-radio input:checked + svg path.outer {
+  stroke-dashoffset: 0;
+}
+.btn-radio span {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.payment-successful {
+  padding: 7em 5% 3%;
+}
+.payment-successful > div {
+  gap: 3em;
+  padding: 7em;
+  border: 2px solid #000;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.payment-successful > div > h1 {
+  font-size: calc(2.5rem + (1vw - 1rem) * 0.5);
+}
+.payment-successful > div > a {
+  width: 12em;
+  border: none;
+  outline: none;
+  color: #fff;
+  cursor: pointer;
+  font-weight: 400;
+  background: #000;
+  padding: 1rem 1.5rem;
+  font-family: "Poppins", sans-serif;
+  border: 2px solid #000;
+  transition: all 500ms ease;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  flex-direction: unset;
+}
+.payment-successful > div > a:hover, .payment-successful > div > a:focus {
+  color: #000;
+  border: 2px solid #000;
+  background-color: #fff;
+}/*# sourceMappingURL=PaymentSuccessful.css.map */

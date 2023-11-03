@@ -326,49 +326,23 @@ body.dark-mode .scroll-to-top .arrow path {
   vertical-align: middle;
 }
 
-.contact {
-  padding: 5% 3%;
-}
-.contact > form {
-  gap: 1em;
-  width: 100%;
-  max-width: 40em;
+.error-page {
   display: flex;
-  text-align: center;
+  justify-content: center;
   align-items: center;
-  justify-content: center;
-  flex-direction: column;
+  height: 100vh;
 }
-.contact > form input,
-.contact > form textarea {
-  width: 100%;
-  resize: none;
-  color: #000;
-  outline: none;
-  padding: 0.7em;
-  border-radius: 0;
-  border: 0.125em solid #A0A0A0;
-}
-.contact > form input::-moz-placeholder, .contact > form textarea::-moz-placeholder {
-  color: #000;
-}
-.contact > form input::placeholder,
-.contact > form textarea::placeholder {
-  color: #000;
-}
-.contact > form input:focus,
-.contact > form textarea:focus {
-  border: 0.2em solid #000;
-}
-.contact > form > div {
-  width: 100%;
-  display: flex;
+.error-page .error-container {
   text-align: center;
-  align-items: flex-end;
-  justify-content: center;
-  flex-direction: column;
+  padding: 2rem;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
-.contact > form > div button {
+.error-page .error-container .error-illustration {
+  margin: 2rem auto 1em;
+}
+.error-page .error-container .error-illustration a {
   border: none;
   outline: none;
   color: #fff;
@@ -385,8 +359,23 @@ body.dark-mode .scroll-to-top .arrow path {
   justify-content: center;
   flex-direction: unset;
 }
-.contact > form > div button:hover, .contact > form > div button:focus {
+.error-page .error-container .error-illustration a:hover, .error-page .error-container .error-illustration a:focus {
   color: #000;
   border: 2px solid #000;
   background-color: #fff;
-}/*# sourceMappingURL=Contact.css.map */
+}
+.error-page .error-code {
+  font-size: 3rem;
+  color: #000;
+  margin: 0;
+}
+.error-page .error-message {
+  font-size: 1.5rem;
+  color: #333;
+  margin: 1rem 0;
+}
+.error-page .error-description {
+  font-size: 1rem;
+  color: #777;
+  margin: 0;
+}/*# sourceMappingURL=ErrorPage.css.map */
