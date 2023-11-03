@@ -6,6 +6,12 @@
   align-items: center;
   height: 100vh;
 
+  .error-logo {
+    top: 2em;
+    left: 2em;
+    position: absolute;
+  }
+
   .error-container {
     text-align: center;
     padding: 2rem;

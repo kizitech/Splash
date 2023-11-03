@@ -349,7 +349,7 @@ body.dark-mode .scroll-to-top .arrow path {
   flex-direction: column;
 }
 .preloader img {
-  height: 5.5em;
+  height: 15vw;
 }
 .preloader .texts-container {
   gap: 0.6em;

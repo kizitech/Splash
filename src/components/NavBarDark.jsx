@@ -2,7 +2,6 @@ import Headroom from "react-headroom";
 import { DataContext } from "./DataProvider";
 import { Link, NavLink } from "react-router-dom";
 import React, { useState, useContext } from "react";
-import SearchBar from "./SearchBar";
 
 import { HiOutlineMenuAlt4 } from "react-icons/hi";
 import { VscChromeClose } from "react-icons/vsc";
@@ -16,7 +15,7 @@ import facebook from "/src/assets/icons/facebook.svg";
 import twitter from "/src/assets/icons/twitter.svg";
 import pintrest from "/src/assets/icons/pintrest.svg";
 
-function NavBar() {
+function NavBar({ setSearchQuery }) {
   const [nav, setNav] = useState(false);
   const handleNav = () => setNav(!nav);
 
@@ -24,7 +23,10 @@ function NavBar() {
   const value = useContext(DataContext);
   const [cart] = value.cart;
 
-  // const [SearchTerm, setSearchTerm] = useState("");
+  const handleSearch = (e) => {
+    const query = e.target.value;
+    setSearchQuery(query); // Set the search query when the user types in the search bar
+  };
 
   return (
     <>
@@ -56,7 +58,23 @@ function NavBar() {
               </NavLink>
             </ul>
             <div className="nav-icons">
-              <SearchBar />
+              <div>
+                <form className="search">
+                  <input
+                    type="text"
+                    className="search-input"
+                    placeholder="Search..."
+                    onChange={handleSearch} // Handle search input changes
+                  />
+                  <button type="submit">
+                    <img
+                      src={searchIcon}
+                      alt="search product"
+                      className="search-icon"
+                    />
+                  </button>
+                </form>
+              </div>
               <div className="cart-icon">
                 <span>{cart.length}</span>
                 <Link to="/shop/cart">

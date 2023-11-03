@@ -78,7 +78,11 @@ export default function Cart() {
       <NavBarDark />
       <main className="cart">
         {cart.map((product) => (
-          <div key={product._id} className="cart__product">
+          <Link
+            key={product._id}
+            to={`/shop/products/${product._id}`}
+            className="cart__product"
+          >
             <img
               src={product.images[0]}
               alt={product.title}
@@ -133,7 +137,7 @@ export default function Cart() {
                 <VscChromeClose className="close-menu" />
               </div>
             </div>
-          </div>
+          </Link>
         ))}
 
         <div className="cart__summary">

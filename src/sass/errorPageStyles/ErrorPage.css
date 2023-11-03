@@ -332,6 +332,11 @@ body.dark-mode .scroll-to-top .arrow path {
   align-items: center;
   height: 100vh;
 }
+.error-page .error-logo {
+  top: 2em;
+  left: 2em;
+  position: absolute;
+}
 .error-page .error-container {
   text-align: center;
   padding: 2rem;
