@@ -66,7 +66,7 @@ function NavBar({ setSearchQuery }) {
                     placeholder="Search..."
                     onChange={handleSearch} // Handle search input changes
                   />
-                  <button type="submit">
+                  <button type="button">
                     <img
                       src={searchIcon}
                       alt="search product"
