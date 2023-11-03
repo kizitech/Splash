@@ -71,10 +71,10 @@ export const footerLinks = [
 ];
 
 
-import instagram from "src/assets/icons/instagram.svg"
-import facebook from "src/assets/icons/facebook.svg"
-import twitter from "src/assets/icons/twitter.svg"
-import pintrest from "src/assets/icons/pintrest.svg"
+import instagram from "/src/assets/icons/instagram.svg"
+import facebook from "/src/assets/icons/facebook.svg"
+import twitter from "/src/assets/icons/twitter.svg"
+import pintrest from "/src/assets/icons/pintrest.svg"
 
 
 

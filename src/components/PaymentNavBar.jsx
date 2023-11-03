@@ -1,6 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import chevronRight from "src/assets/icons/chevron-right.svg";
+import chevronRight from "/src/assets/icons/chevron-right.svg";
 
 function ActiveLink({ to, children }) {
   const isActive = window.location.pathname === to;
@@ -21,21 +21,38 @@ function PaymentNavBar() {
     <main>
       <nav>
         <ul style={styles.paymentNav}>
-          <li><ActiveLink to="/shop/information">Information</ActiveLink></li>
+          <li>
+            <ActiveLink to="/shop/information">Information</ActiveLink>
+          </li>
 
-          <li><img src={chevronRight} alt="Continue to shipping" className="nextpage" /></li>
+          <li>
+            <img
+              src={chevronRight}
+              alt="Continue to shipping"
+              className="nextpage"
+            />
+          </li>
 
-          <li><ActiveLink to="/shop/shipping">Shipping</ActiveLink></li>
+          <li>
+            <ActiveLink to="/shop/shipping">Shipping</ActiveLink>
+          </li>
 
-          <li><img src={chevronRight} alt="Continue to payment" className="nextpage" /></li>
+          <li>
+            <img
+              src={chevronRight}
+              alt="Continue to payment"
+              className="nextpage"
+            />
+          </li>
 
-          <li><ActiveLink to="/shop/payment">Payment</ActiveLink></li>
+          <li>
+            <ActiveLink to="/shop/payment">Payment</ActiveLink>
+          </li>
         </ul>
       </nav>
     </main>
   );
 }
-
 
 const styles = {
   paymentNav: {
@@ -45,6 +62,6 @@ const styles = {
     justifyContent: "center",
     padding: "5%",
   },
-}; 
+};
 
 export default PaymentNavBar;

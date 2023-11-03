@@ -1,21 +1,20 @@
 import React, { createContext, useState, useEffect } from "react";
 
-import model1 from "src/assets/images/shop/Rectangle 61.png";
-import model2 from "src/assets/images/shop/Rectangle 58.png";
-import model3 from "src/assets/images/shop/Rectangle 65.png";
-import model4 from "src/assets/images/shop/Rectangle 27.png";
-import model4Thumbnail1 from "src/assets/images/shop/Rectangle 27 (1).png";
-import model4Thumbnail2 from "src/assets/images/shop/Rectangle 27 (2).png";
-import model5 from "src/assets/images/shop/Rectangle 63.png";
-import model6 from "src/assets/images/shop/Rectangle 66.png";
-import model7 from "src/assets/images/shop/Rectangle 62.png";
-import model8 from "src/assets/images/shop/Rectangle 60.png";
+import model1 from "/src/assets/images/shop/Rectangle 61.png";
+import model2 from "/src/assets/images/shop/Rectangle 58.png";
+import model3 from "/src/assets/images/shop/Rectangle 65.png";
+import model4 from "/src/assets/images/shop/Rectangle 27.png";
+import model4Thumbnail1 from "/src/assets/images/shop/Rectangle 27 (1).png";
+import model4Thumbnail2 from "/src/assets/images/shop/Rectangle 27 (2).png";
+import model5 from "/src/assets/images/shop/Rectangle 63.png";
+import model6 from "/src/assets/images/shop/Rectangle 66.png";
+import model7 from "/src/assets/images/shop/Rectangle 62.png";
+import model8 from "/src/assets/images/shop/Rectangle 60.png";
 
-import homeModel1 from "src/assets/images/home/Rectangle 26.png";
-import homeModel2 from "src/assets/images/home/Rectangle 37.png";
-import homeModel3 from "src/assets/images/home/Rectangle 38.png";
-import homeModel4 from "src/assets/images/home/Rectangle 39.png";
-
+import homeModel1 from "/src/assets/images/home/Rectangle 26.png";
+import homeModel2 from "/src/assets/images/home/Rectangle 37.png";
+import homeModel3 from "/src/assets/images/home/Rectangle 38.png";
+import homeModel4 from "/src/assets/images/home/Rectangle 39.png";
 
 export const DataContext = createContext();
 export default function DataProvider(props) {
@@ -181,7 +180,6 @@ export default function DataProvider(props) {
       count: 1,
     },
   ]);
-
 
   // ADD TO CART FOR SHOP PAGE
   const addCart = (id) => {

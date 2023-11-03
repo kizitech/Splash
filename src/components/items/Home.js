@@ -1,6 +1,6 @@
-import homeModel5 from "src/assets/images/home/Rectangle 56.png";
-import homeModel6 from "src/assets/images/home/Rectangle 35.png";
-import homeModel7 from "src/assets/images/home/Rectangle 87.png";
+import homeModel5 from "/src/assets/images/home/Rectangle 56.png";
+import homeModel6 from "/src/assets/images/home/Rectangle 35.png";
+import homeModel7 from "/src/assets/images/home/Rectangle 87.png";
 
 
 export const latestArrivals = [

@@ -1,5 +1,5 @@
 import { Link, useParams } from "react-router-dom";
-import { DataContext } from "src/components/DataProvider";
+import { DataContext } from "/src/components/DataProvider";
 import React, { useContext, useState, useRef } from "react";
 import {
   Sizes,
@@ -7,10 +7,10 @@ import {
   StarRating,
   NavBarDark,
   ProductThumbnails,
-} from "src/components";
+} from "/src/components";
 
-import add from "src/assets/icons/plus.svg";
-import remove from "src/assets/icons/minus.svg";
+import add from "/src/assets/icons/plus.svg";
+import remove from "/src/assets/icons/minus.svg";
 
 export default function Details() {
   const { id } = useParams();
@@ -32,24 +32,23 @@ export default function Details() {
     imgDiv.current.style.backgroundPosition = `${x}% ${y}%`;
   };
 
-  
-    const reduction = (id) => {
-      homeProducts.forEach((item) => {
-        if (item._id === id) {
-          item.count === 1 ? (item.count = 1) : (item.count -= 1);
-        }
-      });
-      setHomeProducts([...homeProducts]);
-    };
+  const reduction = (id) => {
+    homeProducts.forEach((item) => {
+      if (item._id === id) {
+        item.count === 1 ? (item.count = 1) : (item.count -= 1);
+      }
+    });
+    setHomeProducts([...homeProducts]);
+  };
 
-    const increase = (id) => {
-      homeProducts.forEach((item) => {
-        if (item._id === id) {
-          item.count += 1;
-        }
-      });
-      setHomeProducts([...homeProducts]);
-    };
+  const increase = (id) => {
+    homeProducts.forEach((item) => {
+      if (item._id === id) {
+        item.count += 1;
+      }
+    });
+    setHomeProducts([...homeProducts]);
+  };
 
   return (
     <>
@@ -63,7 +62,9 @@ export default function Details() {
                 <div
                   className="buy__details-image"
                   onMouseMove={handleMouseMove}
-                  style={{ backgroundImage: `url("${homeProduct.images[index]}")` }}
+                  style={{
+                    backgroundImage: `url("${homeProduct.images[index]}")`,
+                  }}
                   ref={imgDiv}
                   onMouseLeave={() =>
                     (imgDiv.current.style.backgroundPosition = `center`)

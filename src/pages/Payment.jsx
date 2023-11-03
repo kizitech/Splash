@@ -1,12 +1,12 @@
 import { Link } from "react-router-dom";
-import { DataContext } from "src/components/DataProvider";
-import { NavBarDark, PaymentNavBar } from "src/components";
+import { DataContext } from "/src/components/DataProvider";
+import { NavBarDark, PaymentNavBar } from "/src/components";
 import React, { useContext, useState, useEffect } from "react";
 
-import visa from "src/assets/icons/visa.svg";
-import paypal from "src/assets/icons/paypal.png";
-import AE from "src/assets/icons/American Express.png";
-import mastercard from "src/assets/icons/mastercard.svg";
+import visa from "/src/assets/icons/visa.svg";
+import paypal from "/src/assets/icons/paypal.png";
+import AE from "/src/assets/icons/American Express.png";
+import mastercard from "/src/assets/icons/mastercard.svg";
 
 function Payment() {
   const value = useContext(DataContext);

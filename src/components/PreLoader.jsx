@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
-import { preLoaderAnim } from "src/components/items/Animation";
+import { preLoaderAnim } from "/src/components/items/Animation";
 
-import logo from "src/assets/icons/logo.svg";
+import logo from "/src/assets/icons/logo.svg";
 
 const PreLoader = () => {
   useEffect(() => {
@@ -10,7 +10,9 @@ const PreLoader = () => {
   return (
     <>
       <div className="preloader">
-        <div><img src={logo} alt="Logo" /></div>
+        <div>
+          <img src={logo} alt="Logo" />
+        </div>
         <div className="texts-container">
           <span>Make </span>
           <span>bold</span>

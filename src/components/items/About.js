@@ -1,9 +1,9 @@
-import team1 from "src/assets/images/about/founder.png"; 
-import team2 from "src/assets/images/about/director.png"; 
-import team3 from "src/assets/images/about/market-researcher.png"; 
-import team4 from "src/assets/images/about/stylish.png"; 
-import team5 from "src/assets/images/about/manager.png";
-import team6 from "src/assets/images/about/photographer.png"; 
+import team1 from "/src/assets/images/about/founder.png";
+import team2 from "/src/assets/images/about/director.png";
+import team3 from "/src/assets/images/about/market-researcher.png";
+import team4 from "/src/assets/images/about/stylish.png";
+import team5 from "/src/assets/images/about/manager.png";
+import team6 from "/src/assets/images/about/photographer.png";
 
 
 export const splashTeam = [

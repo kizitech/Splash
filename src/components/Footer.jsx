@@ -1,6 +1,6 @@
 import React from "react";
 
-import logoDark from "src/assets/icons/logo-black.svg";
+import logoDark from "/src/assets/icons/logo-black.svg";
 import { footerLinks, socialMedia } from "../components/items/Footer";
 
 function Footer() {

@@ -1,7 +1,7 @@
-import { NavBarDark } from "src/components";
-import { splashTeam } from "src/components/items/About";
-import sketch from "src/assets/images/about/clothes-sketches.png";
-import founder from "src/assets/images/about/founder-image.png";
+import { NavBarDark } from "/src/components";
+import { splashTeam } from "/src/components/items/About";
+import sketch from "/src/assets/images/about/clothes-sketches.png";
+import founder from "/src/assets/images/about/founder-image.png";
 
 function About() {
   return (
@@ -12,7 +12,12 @@ function About() {
         <h1 className="about__title">About Us</h1>
         <section className="about__section">
           <div className="about__info">
-            <img src={sketch} title="Some Of Our Team Works" alt="clothes sketches" className="about__image" />
+            <img
+              src={sketch}
+              title="Some Of Our Team Works"
+              alt="clothes sketches"
+              className="about__image"
+            />
             <p className="about__text">
               <strong>
                 We give the most sophisticating and most beautiful look to our
@@ -23,7 +28,12 @@ function About() {
             </p>
           </div>
           <div className="about__info about__info-reverse">
-            <img src={founder} alt="founder" title="Founder" className="about__image about__image-reverse" />
+            <img
+              src={founder}
+              alt="founder"
+              title="Founder"
+              className="about__image about__image-reverse"
+            />
             <p className="about__text">
               Splash is a rising brand which came into the limelight in 2020
               when <strong>Tina was awarded the best-dressed</strong> in the

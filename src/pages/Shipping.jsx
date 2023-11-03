@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { NavBarDark, PaymentNavBar } from "src/components";
+import { NavBarDark, PaymentNavBar } from "/src/components";
 
 function Shipping() {
   return (

@@ -1,9 +1,9 @@
 import { Link } from "react-router-dom";
-import { DataContext } from "src/components/DataProvider";
-import { Sizes, Colors, NavBarDark, StarRating } from "src/components";
+import { DataContext } from "/src/components/DataProvider";
+import { Sizes, Colors, NavBarDark, StarRating } from "/src/components";
 
-import plus from "src/assets/icons/plus.svg";
-import minus from "src/assets/icons/minus.svg";
+import plus from "/src/assets/icons/plus.svg";
+import minus from "/src/assets/icons/minus.svg";
 
 import { RiDeleteBin6Line } from "react-icons/ri";
 import { VscChromeClose } from "react-icons/vsc";

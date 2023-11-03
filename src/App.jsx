@@ -1,10 +1,30 @@
-import React from 'react';
-import "src/sass/mainStyles/Main.scss";
+import React from "react";
+import "/src/sass/mainStyles/Main.scss";
 import ScrollToTop from "react-scroll-to-top";
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-import { Footer, DataProvider, ScrollRestoration, PreLoader, BackToTop as Top } from "./components";
-import { Buy, Home, Cart, Blog, Shop, About, Contact, BuyHome, Payment, Shipping, ErrorPage, Information, AccountDetails, PaymentSuccessful } from "./pages";
-
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import {
+  Footer,
+  DataProvider,
+  ScrollRestoration,
+  PreLoader,
+  BackToTop as Top,
+} from "./components";
+import {
+  Buy,
+  Home,
+  Cart,
+  Blog,
+  Shop,
+  About,
+  Contact,
+  BuyHome,
+  Payment,
+  Shipping,
+  ErrorPage,
+  Information,
+  AccountDetails,
+  PaymentSuccessful,
+} from "./pages";
 
 function App() {
   return (
@@ -28,7 +48,10 @@ function App() {
             <Route path="/shop/information" element={<Information />} />
             <Route path="/shop/home-products/:id" element={<BuyHome />} />
             <Route path="/shop/account-details" element={<AccountDetails />} />
-            <Route path="/shop/payment-successful" element={<PaymentSuccessful />}/>
+            <Route
+              path="/shop/payment-successful"
+              element={<PaymentSuccessful />}
+            />
           </Routes>
           <Footer />
         </Router>
