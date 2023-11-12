@@ -121,20 +121,3 @@
     }
   }
 }
-
-body.dark-mode {
-  .footer {
-    
-    &__closing {
-      img {
-        filter: invert(1);
-      }
-    }
-
-    &__social-media {
-      img {
-        filter: invert(1);
-      }
-    }
-  }
-}

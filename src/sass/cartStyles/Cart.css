@@ -508,16 +508,4 @@ body.dark-mode .scroll-to-top .arrow path {
   color: #000;
   border: 2px solid #000;
   background-color: #fff;
-}
-
-body.dark-mode .cart__product-remove {
-  color: #000;
-  transition: all 500ms ease;
-  background: #25272a;
-}
-body.dark-mode .cart__product-remove:hover {
-  color: #fff;
-  background: #fff;
-  border-left: 1px solid #ccc;
-  border-bottom: 1px solid #ccc;
 }/*# sourceMappingURL=Cart.css.map */

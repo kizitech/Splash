@@ -2559,7 +2559,7 @@ body.dark-mode .scroll-to-top .arrow path {
   position: relative;
   display: inline-block;
   padding: 10px 22px;
-  animation: wt-btn_sign-marquee 3s linear infinite;
+  animation: wt-btn_sign-marquee 5s linear infinite;
 }
 
 .wt-btn_sign-bound span:after {
@@ -5906,6 +5906,11 @@ body.dark-mode .scroll-to-top .arrow path {
   align-items: center;
   height: 100vh;
 }
+.error-page .error-logo {
+  top: 2em;
+  left: 2em;
+  position: absolute;
+}
 .error-page .error-container {
   text-align: center;
   padding: 2rem;
@@ -6303,7 +6308,7 @@ body.dark-mode .scroll-to-top .arrow path {
   flex-direction: column;
 }
 .preloader img {
-  height: 5.5em;
+  height: 15vw;
 }
 .preloader .texts-container {
   gap: 0.6em;

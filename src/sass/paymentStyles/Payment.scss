@@ -165,30 +165,3 @@
 .payment-payment__card-details {
   border: 1px solid #ddd;
 }
-
-body.dark-mode {
-  .payment-form {
-    &__contact,
-    &__ship-to,
-    &__total,
-    &__Code {
-      background: transparent;
-      border: 2px solid #ddd;
-
-      label {
-        color: $white;
-      }
-    }
-
-    &__contact,
-    &__ship-to {
-      input {
-        border: 0 !important;
-      }
-    }
-
-    &-payment__card-details {
-      background: rgb(139 139 139 / 46%);
-    }
-  }
-}

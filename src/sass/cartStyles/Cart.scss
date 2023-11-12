@@ -110,16 +110,3 @@
     @include button;
   }
 }
-
-body.dark-mode .cart__product-remove {
-  color: $black;
-  @include transition;
-  background: $darkmode;
-
-  &:hover {
-    color: $white;
-    background: $white;
-    border-left: 1px solid #ccc;
-    border-bottom: 1px solid #ccc;
-  }
-}

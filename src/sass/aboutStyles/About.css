@@ -439,12 +439,4 @@ body.dark-mode .scroll-to-top .arrow path {
     max-width: 44em;
     margin-top: -9em;
   }
-}
-body.dark-mode .about__team-workers {
-  color: #fff;
-  background: #25272a;
-  box-shadow: 0 0 1.25em rgba(32, 32, 32, 0.75) !important;
-}
-body.dark-mode .about__team-name, body.dark-mode .about__team-skill {
-  color: #fff;
 }/*# sourceMappingURL=About.css.map */

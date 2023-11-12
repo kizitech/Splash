@@ -35,10 +35,6 @@ body::-webkit-scrollbar-thumb {
   background-color: #bebebe;
 }
 
-body.dark-mode::-webkit-scrollbar-thumb {
-  border: 0.3em solid #25272a;
-}
-
 body::-webkit-scrollbar-thumb:hover {
   background-color: #aaaaaa;
 }
@@ -125,61 +121,6 @@ textarea {
   outline: 0;
 }
 
-body.dark-mode {
-  color: #fff;
-  background: #25272a;
-}
-body.dark-mode .payment input,
-body.dark-mode .payment select,
-body.dark-mode .payment textarea,
-body.dark-mode .contact input,
-body.dark-mode .contact select,
-body.dark-mode .contact textarea,
-body.dark-mode .shipping input,
-body.dark-mode .shipping select,
-body.dark-mode .shipping textarea,
-body.dark-mode .information input,
-body.dark-mode .information select,
-body.dark-mode .information textarea {
-  color: #fff;
-  background-color: transparent;
-  border: 0.125em solid #a0a0a0;
-}
-body.dark-mode .payment input::-moz-placeholder, body.dark-mode .payment select::-moz-placeholder, body.dark-mode .payment textarea::-moz-placeholder, body.dark-mode .contact input::-moz-placeholder, body.dark-mode .contact select::-moz-placeholder, body.dark-mode .contact textarea::-moz-placeholder, body.dark-mode .shipping input::-moz-placeholder, body.dark-mode .shipping select::-moz-placeholder, body.dark-mode .shipping textarea::-moz-placeholder, body.dark-mode .information input::-moz-placeholder, body.dark-mode .information select::-moz-placeholder, body.dark-mode .information textarea::-moz-placeholder {
-  color: #fff;
-}
-body.dark-mode .payment input::placeholder,
-body.dark-mode .payment select::placeholder,
-body.dark-mode .payment textarea::placeholder,
-body.dark-mode .contact input::placeholder,
-body.dark-mode .contact select::placeholder,
-body.dark-mode .contact textarea::placeholder,
-body.dark-mode .shipping input::placeholder,
-body.dark-mode .shipping select::placeholder,
-body.dark-mode .shipping textarea::placeholder,
-body.dark-mode .information input::placeholder,
-body.dark-mode .information select::placeholder,
-body.dark-mode .information textarea::placeholder {
-  color: #fff;
-}
-body.dark-mode .payment input:focus,
-body.dark-mode .payment select:focus,
-body.dark-mode .payment textarea:focus,
-body.dark-mode .contact input:focus,
-body.dark-mode .contact select:focus,
-body.dark-mode .contact textarea:focus,
-body.dark-mode .shipping input:focus,
-body.dark-mode .shipping select:focus,
-body.dark-mode .shipping textarea:focus,
-body.dark-mode .information input:focus,
-body.dark-mode .information select:focus,
-body.dark-mode .information textarea:focus {
-  border: 0.2em solid #fff;
-}
-body.dark-mode option {
-  color: #000;
-}
-
 nav,
 main,
 footer {
@@ -264,13 +205,6 @@ button {
     opacity: 1;
   }
 }
-body.dark-mode .scroll-to-top {
-  background: #25272a;
-}
-body.dark-mode .scroll-to-top .arrow path {
-  fill: #fff;
-}
-
 .btn-radio {
   cursor: pointer;
   -webkit-user-select: none;
@@ -585,65 +519,4 @@ in .search-input:focus, .search-input:hover {
   .menu-icons {
     height: 6em;
   }
-}
-body.dark-mode .navbar-dark {
-  color: #fff;
-}
-body.dark-mode .navbar-dark .nav-icons img {
-  filter: invert(0);
-}
-body.dark-mode .navbar-dark .search input {
-  color: white;
-}
-body.dark-mode .mobile-menu {
-  background: #25272a;
-}
-body.dark-mode .mobile-menu img {
-  filter: invert(1);
-}
-body.dark-mode .nextpage,
-body.dark-mode .logo-dark,
-body.dark-mode .close-menu {
-  filter: invert(1);
-}
-body.dark-mode .open-menu {
-  filter: invert(0);
-}
-body.dark-mode .navbar-bg {
-  background: #25272a;
-}
-body.dark-mode .navbar-dark-bg {
-  background-color: #25272a;
-}
-body.dark-mode .mobile-menu li {
-  color: #ccc;
-  border-bottom: 1px solid #333;
-}
-body.dark-mode .mobile-menu li:hover {
-  border-bottom: 1px solid #666;
-}
-body.dark-mode .mobile-nav a.active li {
-  color: #ccc;
-  border-bottom: 0.1em solid #ccc;
-}
-body.dark-mode .menu-icons a,
-body.dark-mode .menu-icons div[role=input] {
-  border: none;
-  background: #ccc;
-}
-body.dark-mode .menu-icons input::-moz-placeholder {
-  color: #000;
-  display: flex;
-  text-align: left;
-  align-items: flex-start;
-  justify-content: center;
-  flex-direction: column;
-}
-body.dark-mode .menu-icons input::placeholder {
-  color: #000;
-  display: flex;
-  text-align: left;
-  align-items: flex-start;
-  justify-content: center;
-  flex-direction: column;
 }/*# sourceMappingURL=NavBar.css.map */

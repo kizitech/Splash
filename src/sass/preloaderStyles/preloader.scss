@@ -29,6 +29,7 @@
         overflow: hidden;
         font-weight: 100;
         font-size: 1.25rem;
+        padding: 0 $p-md;
         @include flex(center, center, center, row);
     }
 }
