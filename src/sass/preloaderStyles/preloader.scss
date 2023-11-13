@@ -25,11 +25,12 @@
         gap: 0.6em;
         opacity: 0;
         width: 22em;
+        max-width: 100%;
         flex-wrap: wrap;
         overflow: hidden;
         font-weight: 100;
         font-size: 1.25rem;
-        padding: 0 $p-md;
+        padding: 0 $p-lg;
         @include flex(center, center, center, row);
     }
 }
