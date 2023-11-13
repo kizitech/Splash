@@ -64,7 +64,7 @@ function NavBar({ setSearchQuery }) {
                     type="text"
                     className="search-input"
                     placeholder="Search..."
-                    onChange={handleSearch} // Handle search input changes
+                    onChange={handleSearch}
                   />
                   <button type="button">
                     <img
@@ -120,7 +120,11 @@ function NavBar({ setSearchQuery }) {
               <div className="mobile-menu-bottom">
                 <div className="menu-icons">
                   <div role="input">
-                    <input type="text" placeholder="Search" />
+                    <input
+                      type="text"
+                      placeholder="Search"
+                      onChange={handleSearch}
+                    />
                   </div>
                   <Link to="/shop/cart">
                     <div className="cart-icon">
